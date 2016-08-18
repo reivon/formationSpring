@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+    <context:annotation-config/>
+
+    <context:component-scan base-package="fr.reivon.formation.spring4"/>
+
+    <!-- Le même que défini dans app-context-jpa car ils ne sont pas partagé sur les controller. -->
+    <bean id="propertyPlaceHolder" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <!-- Pas d'exception si une des locations n'est pas trouvée -->
+        <property name="ignoreResourceNotFound" value="true" />
+        <!-- Recherche dans les variables d'environnement système et de la JVM -->
+        <property name="searchSystemEnvironment" value="true" />
+        <!-- Les variables d'environnement système et de JVM surchargent celles définies dans les fichiers properties -->
+        <property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE"/>
+        <property name="locations">
+            <list>
+                <value>classpath:dev.application.properties</value>
+                <!-- Surcharge des valeurs par défaut (les derniers locations surchargent les premiers)-->
+                <value>file:${project.home}/prod.application.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="propertyLoader" class="fr.reivon.formation.spring4.PropertyLoader">
+        <property name="dbLogin" value="${my.dbLogin}" />
+    </bean>
+
+</beans>

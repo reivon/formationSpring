@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="vehiculeCollection" class="fr.reivon.formation.spring3.VehiculeCollection">
+
+        <property name="vehiculeList">
+            <list>
+                <value>Peugeot</value>
+                <value>Renault</value>
+                <value>Lexus</value>
+                <value>Lexus</value>
+            </list>
+        </property>
+
+        <property name="vehiculeSet">
+            <set>
+                <value>Peugeot</value>
+                <value>Renault</value>
+                <value>Lexus</value>
+                <value>Lexus</value>
+            </set>
+        </property>
+
+        <property name="vehiculeMap">
+            <map>
+                <entry key="1" value="Peugeot"/>
+                <entry key="2" value="Renault"/>
+                <entry key="3" value="Lexus"/>
+                <entry key="4" value="Lexus"/>
+            </map>
+        </property>
+
+        <property name="vehiculeProp">
+            <props>
+                <prop key="1">Peugeot</prop>
+                <prop key="2">Renault</prop>
+                <prop key="3">Lexus</prop>
+                <prop key="4">Lexus</prop>
+            </props>
+        </property>
+
+    </bean>
+
+</beans>

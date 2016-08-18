@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/FormationSpring_1/FormationSpring_1.iml" filepath="$PROJECT_DIR$/FormationSpring_1/FormationSpring_1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FormationSpring_10/FormationSpring_10.iml" filepath="$PROJECT_DIR$/FormationSpring_10/FormationSpring_10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FormationSpring_2/FormationSpring_2.iml" filepath="$PROJECT_DIR$/FormationSpring_2/FormationSpring_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FormationSpring_3/FormationSpring_3.iml" filepath="$PROJECT_DIR$/FormationSpring_3/FormationSpring_3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FormationSpring_4/FormationSpring_4.iml" filepath="$PROJECT_DIR$/FormationSpring_4/FormationSpring_4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FormationSpring_5/FormationSpring_5.iml" filepath="$PROJECT_DIR$/FormationSpring_5/FormationSpring_5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FormationSpring_6/FormationSpring_6.iml" filepath="$PROJECT_DIR$/FormationSpring_6/FormationSpring_6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FormationSpring_7/FormationSpring_7.iml" filepath="$PROJECT_DIR$/FormationSpring_7/FormationSpring_7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FormationSpring_8/FormationSpring_8.iml" filepath="$PROJECT_DIR$/FormationSpring_8/FormationSpring_8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FormationSpring_9/FormationSpring_9.iml" filepath="$PROJECT_DIR$/FormationSpring_9/FormationSpring_9.iml" />
+    </modules>
+  </component>
+</project>
