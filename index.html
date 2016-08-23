@@ -44,8 +44,9 @@
 					</p>
 
                     <aside class="notes">
-                        Se présenter rapidement.
-                        Pas formation expert. Il faut fouiller / adapter.
+                        Se présenter rapidement.<br />
+                        Leur demander de se présenter / niveau de connaissance en struts / spring.<br />
+                        Pas formation expert. Il faut fouiller / adapter.<br />
                     </aside>
 				</section>
 
@@ -80,6 +81,7 @@
 
 					<section>
 						<h3>Un conteneur léger</h3>
+                        <br />
 						<ul>
 							<li class="fragment">Framework reponsant sur 3 grands principes
 								<ul>
@@ -94,11 +96,11 @@
 						</ul>
 
                         <aside class="notes">
-                            Inversion de contrôle = Injection de dépendance. (exemple par la suite)
-                            Définir programmation orienté aspect => transversale.
-                            Couche d'abstraction : Hibernate / quartz / velocity / jdbc / ...
-
-                            Entre chaque version il y a eu de nombreuses et importantes évolution.
+                            Inversion de contrôle = Injection de dépendance. (exemple par la suite)<br />
+                            Définir programmation orienté aspect => transversale.<br />
+                            Couche d'abstraction : Hibernate / quartz / velocity / jdbc / ...<br />
+                            <br />
+                            Entre chaque version il y a eu de nombreuses et importantes évolution.<br />
                         </aside>
 					</section>
 
@@ -120,6 +122,7 @@
 
                     <section>
                         <h3>C'est quoi l'Inversion of Control</h3>
+                        <br />
                         <ul>
                             <li>Aujourd'hui plutôt nommé injection de dépendance</li>
                             <li>Déresponsabilisation / Déspécialisation des classes</li>
@@ -149,21 +152,79 @@ public class Pot {
 }
                         </code></pre>
                         <aside class="notes">
-                            Plante a ici la responsabilité de l'instanciation de la Tomate. Ca ne peut être que ça.
-                            Si l'application évolue, ou on souhaite l'étendre, ou on souhaite mocker pour test => on doit modifier le code.
+                            Plante a ici la responsabilité de l'instanciation de la Tomate. Ca ne peut être que ça.<br />
+                            Si l'application évolue, ou on souhaite l'étendre, ou on souhaite mocker pour test => on doit modifier le code.<br />
                         </aside>
                     </section>
 
                     <section>
                         <h3>Exemple XML</h3>
+                        <br />
+                        <ul>
+                            <li>Dépendance maven sur spring-context</li>
+                            <li>Un fichier de configuration principal</li>
+                            <li>Déclaration de bean et d'injection de dépendance via l'xml</li>
+                        </ul>
+
+                        <aside class="notes">
+                            Projet exemple : <b>springFormation_1</b>.<br />
+                            Dépendance de context : https://mvnrepository.com/artifact/org.springframework/spring-context/4.3.2.RELEASE
+                            app / beans / core / expression.<br />
+                            Il est possible de découper le fichier XML en réalisant des imports (Mais un seul d'entrée).
+                        </aside>
                     </section>
 
                     <section>
                         <h3>Exemple Annotation</h3>
+                        <br />
+                        <ul>
+                            <li>Dépendance identique</li>
+                            <li>Une classe de configuration principale</li>
+                            <li>Déclaration des beans et injection de dépendance via les annotations</li>
+                        </ul>
+
+                        <aside class="notes">
+                            Projet exemple : <b>springFormation_2</b>.<br />
+                            On peut retrouver l'annotation @Bean aussi<br />
+                            <br />
+                            Ainsi, si dans messageServiceImpl on supprime le @Component, on peut déclarer dans la classe Application :<br />
+                            <pre>
+                            @Bean
+                            public MessageServiceImpl messageService(){
+                                return new MessageServiceImpl();
+                            }
+                            </pre>
+                            Il est à noter que l'on peut avoir plusieurs @Configuration si on souhaite découper notre application.<br />
+                            On peut réaliser des héritages / dépendances avec @Import(nomClass.class)<br />
+                        </aside>
                     </section>
 
                     <section>
-                        <h3></h3>
+                        <h3>Annotation ou XML ?</h3>
+                        <ul>
+                            <li>Pas de best solution</li>
+                            <li>En XML : on ne peut pas faire de bean dynamique</li>
+                            <li>En Annotation : on ne peut </li>
+                            <li>Utiliser le meilleur des deux : un mix</li>
+                            <li>La tendance est tout de même à l'annotation pour tout ce </li>
+                        </ul>
+
+                        <aside class="notes">
+                            Dépendance de context : https://mvnrepository.com/artifact/org.springframework/spring-context/4.3.2.RELEASE<br />
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h3>Quelques précisions sur @Component</h3>
+                        <ul>
+                            <li>Sur la classe VoitureDeCourse va créé un bean nommé "voitureDeCourse"</li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+
+                        <aside class="notes">
+                            Dépendance de context : https://mvnrepository.com/artifact/org.springframework/spring-context/4.3.2.RELEASE<br />
+                        </aside>
                     </section>
 
                 </section>

@@ -52,7 +52,7 @@ Exemple springFormation_2 : en full annotation
 Les annotations sont pas toujours préférables à l'xml. On peut faire plus de chose en XML. Par exemple déclaré des beans différents sur une même classe (impossible en annotation).
 Il n'y a pas de choix à faire, le mix est l'alliage parfait et dépend du projet.
 
-Note sur springFormation_2 : On peut rtrouver l'annotation @Bean aussi
+Note sur springFormation_2 : On peut retrouver l'annotation @Bean aussi
 
 Ainsi, si dans messageServiceImpl on supprime le @Component, on peut déclarer dans la classe Application :
     @Bean
@@ -63,15 +63,35 @@ Ainsi, si dans messageServiceImpl on supprime le @Component, on peut déclarer d
 Il est à noter que l'on peut avoir plusieurs @Configuration si on souhaite découper notre application.
 On peut réaliser des héritages / dépendances avec @Import(nomClass.class)
 
-
  --- Component
 
 Déclaration du component "Peugeot" va créé un bean nommé automatiquement "peugeot". Il est possible de définir explicitement ce nom.
 Il y a des dérivés à @component => @Repository @Service @Controller
 C'est la même chose mais permet de réaliser de l'AOP plus efficacement et certains outils recherche les bonnes annotations.
 
+Et @Bean alors ? Disponbile uniquement si on utilise @Configuration.
+Ca ne fait pas exactement la même chose. @Component laisse spring généré un bean avec un nom etc.
+Avec @Bean on déclare explicitement une implémentation. On peut par exemple créé une espèce de factory : (impossible avec component)
 
- --- Autowire / Resource
+Attention, on ne peut plus utiliser l'AOP sur des instanciations de type @Bean.
+    => http://zezutom.blogspot.fr/2014/02/spring-series-part-5-component-vs-bean.html
+
+@Bean
+@Scope("prototype")
+public SomeService someService() {
+    switch (state) {
+    case 1:
+        return new Impl1();
+    case 2:
+        return new Impl2();
+    case 3:
+        return new Impl3();
+    default:
+        return new Impl();
+    }
+}
+
+ --- Autowire / Qualifier / Resource
 
 Les deux fonctionne par recherche type. Mais autowire peut spécifier qu'il n'est pas obligatoire et resource permet de spécifier un nom de bean explicite.
 
@@ -83,6 +103,17 @@ Autowire : Attention, définir 2 beans sur la même classe = autowired plante pa
 Et au final : setter ou constructeur pour déclarer les dépendances ?
 On peut mixer les deux. La logique veut qu'on mette en setter les dépendances facultatives et en constructeurs les obligatoires.
 
+Autowire / Qualifier (spring 3.0) sont des annotation spring qui peuvent être placé sur des constructeurs, setter, propriétés ...
+Resource est une annotation Java (compris par spring en spring 2.0) qui ne peut être placé que sur une propriété d'une classe. Mais ça fait la même chose.
+
+@Resource(name = "toto")
+private Toto toto;
+        ==
+@Autowired
+@Qualifier("toto")
+private Toto toto;
+
+Sur des injections de propriétés, il est préférable d'utiliser @Resource qui est un standard Java et qui est fait pour ça.
 
  --- scope
 
