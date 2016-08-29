@@ -1,4 +1,4 @@
-package fr.reivon.formation.spring11;
+package fr.reivon.formation.spring12;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,6 +26,15 @@ public class HelloController {
 		model.addObject("title", "Spring Security Hello World");
 		model.addObject("message", "Ceci est la page protégé !");
 		model.setViewName("admin");
+
+		return model;
+	}
+
+	@RequestMapping(value = { "/login" }, method = RequestMethod.GET)
+	public ModelAndView loginPage() {
+
+		ModelAndView model = new ModelAndView();
+		model.setViewName("login");
 
 		return model;
 	}

@@ -309,18 +309,26 @@ Ce n'est que de l'héritage au niveau de la configuration des beans.
     Petit détail dans le projet 10, l'encoding filter a été ajouté dans le web.xml
     Permet de filtrer toutes les transactions HTTP pour notamment récupérer les données formulaires en UTF-8
 
+4. Spring security
 
-4. spring test + JUnit
-
-5. Spring security
-
-    Exemple sur le projet FormationSpring_11 :
+    4.1 Exemple sur le projet FormationSpring_11 :
         Ajout de dépendance dans le web.xml (attention, version différente de spring core)
         On ajoute le filtre de spring security dans le web.xml
         On crée le fichier de configuration de spring security
         Test d'accès :
             localhost:8080/welcome
             localhost:8080/admin
+        La login page est par défaut.
+        Spring 4 demande de gérer des tokens crslf
+
+    4.2 Exemple sur le projet FormationSpring_12 :
+        Ajout d'une page de login
+        Déclaration controller login
+        Ajout page login
+        Le logout est géré par login?logout automatiquement
+        L'erreur de log est géré par login?error automatiquement
+        username et password doivent être présent
+
 
 http://docs.spring.io/spring-security/site/docs/current/guides/html5//
 Spring with java config : http://docs.spring.io/spring-security/site/docs/current/guides/html5//helloworld-javaconfig.html
@@ -331,7 +339,12 @@ Exemple basé sur Spring security basic (form login auto généré) : http://www
 Exemple basé sur custom form login : http://www.mkyong.com/spring-security/spring-security-form-login-example/
 Exemple basé sur Basic Authen : https://www.mkyong.com/spring-security/spring-security-http-basic-authentication-example/
 
+
+5. spring test + JUnit
+
+
 6. Spring batch
+
 
 7. Les bonus
  7.1 AOP

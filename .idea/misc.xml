@@ -6,6 +6,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/FormationSpring_10" />
     <file type="web" url="file://$PROJECT_DIR$/FormationSpring_11" />
+    <file type="web" url="file://$PROJECT_DIR$/FormationSpring_12" />
     <file type="web" url="file://$PROJECT_DIR$/FormationSpring_5" />
     <file type="web" url="file://$PROJECT_DIR$/FormationSpring_6" />
     <file type="web" url="file://$PROJECT_DIR$/FormationSpring_7" />
@@ -26,6 +27,7 @@
         <option value="$PROJECT_DIR$/FormationSpring_9/pom.xml" />
         <option value="$PROJECT_DIR$/FormationSpring_4/pom.xml" />
         <option value="$PROJECT_DIR$/FormationSpring_11/pom.xml" />
+        <option value="$PROJECT_DIR$/FormationSpring_12/pom.xml" />
       </list>
     </option>
   </component>
