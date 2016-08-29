@@ -314,6 +314,23 @@ Ce n'est que de l'héritage au niveau de la configuration des beans.
 
 5. Spring security
 
+    Exemple sur le projet FormationSpring_11 :
+        Ajout de dépendance dans le web.xml (attention, version différente de spring core)
+        On ajoute le filtre de spring security dans le web.xml
+        On crée le fichier de configuration de spring security
+        Test d'accès :
+            localhost:8080/welcome
+            localhost:8080/admin
+
+http://docs.spring.io/spring-security/site/docs/current/guides/html5//
+Spring with java config : http://docs.spring.io/spring-security/site/docs/current/guides/html5//helloworld-javaconfig.html
+Spring with mvc java config : http://docs.spring.io/spring-security/site/docs/current/guides/html5//hellomvc-javaconfig.html
+
+
+Exemple basé sur Spring security basic (form login auto généré) : http://www.mkyong.com/spring-security/spring-security-hello-world-example/
+Exemple basé sur custom form login : http://www.mkyong.com/spring-security/spring-security-form-login-example/
+Exemple basé sur Basic Authen : https://www.mkyong.com/spring-security/spring-security-http-basic-authentication-example/
+
 6. Spring batch
 
 7. Les bonus

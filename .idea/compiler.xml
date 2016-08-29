@@ -25,6 +25,7 @@
         <module name="FormationSpring_1" />
         <module name="formationSpring_1" />
         <module name="FormationSpring_10" />
+        <module name="FormationSpring_11" />
         <module name="FormationSpring_2" />
         <module name="FormationSpring_3" />
         <module name="FormationSpring_4" />
@@ -40,6 +41,7 @@
       <module name="formationSpring_1" target="1.5" />
       <module name="FormationSpring_1" target="1.5" />
       <module name="FormationSpring_10" target="1.5" />
+      <module name="FormationSpring_11" target="1.5" />
       <module name="formationSpring_2" target="1.5" />
       <module name="FormationSpring_2" target="1.5" />
       <module name="FormationSpring_3" target="1.5" />

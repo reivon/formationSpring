@@ -5,6 +5,7 @@
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/FormationSpring_10" />
+    <file type="web" url="file://$PROJECT_DIR$/FormationSpring_11" />
     <file type="web" url="file://$PROJECT_DIR$/FormationSpring_5" />
     <file type="web" url="file://$PROJECT_DIR$/FormationSpring_6" />
     <file type="web" url="file://$PROJECT_DIR$/FormationSpring_7" />
@@ -24,6 +25,7 @@
         <option value="$PROJECT_DIR$/FormationSpring_10/pom.xml" />
         <option value="$PROJECT_DIR$/FormationSpring_9/pom.xml" />
         <option value="$PROJECT_DIR$/FormationSpring_4/pom.xml" />
+        <option value="$PROJECT_DIR$/FormationSpring_11/pom.xml" />
       </list>
     </option>
   </component>
@@ -37,7 +39,7 @@
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_3" default="false" assert-keyword="false" jdk-15="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
