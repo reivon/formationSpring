@@ -5,115 +5,8 @@ spring framework : http://projects.spring.io/spring-framework/
 Getting started : https://docs.spring.io/spring/docs/current/spring-framework-reference/html/overview-getting-started-with-spring.html
 
 
-### 0. Présentation spring framework
-	Aujourd'hui version 4.2.3
-	Version 5 bientôt
-
-	Ce n'est pas une formation expert, c'est une vision de ce qui vous attend à 90%. Le reste il faut fouiller / adapter.
-
-
 ### 1. Spring core
 
-
- -- Pourquoi spring ?
-
-/**
- * Pot qui contient une plante.
- */
-public class Pot {
-	/** Plante dans le pot */
-	private Plante plante;
-	/** Constructeur qui crée une plante spécifique: pas d'IoC*/
-	public Pot() {
-		plante = new Tomate();
-	}
-	/** Constructeur avec plante: compatible IoC*/
-	public Pot(Plante plante) {
-		this.plante = plante;
-	}
-}
-
-Plante a ici la responsabilité de l'instanciation de la Tomate.
-Mais si l'application évolue, qu'on souhaite l'étendre, ou qu'on souhaite mocker cette instanciation (exemple si c'est un web service) on doit modifier le code.
-
-On veut pouvoir mocker / étendre / sans modifier le code et donc externaliser la responsabilité des instanciations.
-
-
- --- Exemple de base :
-
-Exemple springFormation_1 : en XML
-Dépendance de context : https://mvnrepository.com/artifact/org.springframework/spring-context/4.3.2.RELEASE
-app / beans / core / expression
-
-Il est possible d'avoir plusieurs fichiers XML mais un seul d'entrée. C'est l'applicationContext qui va importer les autres fichiers.
-
-Exemple springFormation_2 : en full annotation
-
-Les annotations sont pas toujours préférables à l'xml. On peut faire plus de chose en XML. Par exemple déclaré des beans différents sur une même classe (impossible en annotation).
-Il n'y a pas de choix à faire, le mix est l'alliage parfait et dépend du projet.
-
-Note sur springFormation_2 : On peut retrouver l'annotation @Bean aussi
-
-Ainsi, si dans messageServiceImpl on supprime le @Component, on peut déclarer dans la classe Application :
-    @Bean
-    public MessageServiceImpl messageService(){
-        return new MessageServiceImpl();
-    }
-
-Il est à noter que l'on peut avoir plusieurs @Configuration si on souhaite découper notre application.
-On peut réaliser des héritages / dépendances avec @Import(nomClass.class)
-
- --- Component
-
-Déclaration du component "Peugeot" va créé un bean nommé automatiquement "peugeot". Il est possible de définir explicitement ce nom.
-Il y a des dérivés à @component => @Repository @Service @Controller
-C'est la même chose mais permet de réaliser de l'AOP plus efficacement et certains outils recherche les bonnes annotations.
-
-Et @Bean alors ? Disponbile uniquement si on utilise @Configuration.
-Ca ne fait pas exactement la même chose. @Component laisse spring généré un bean avec un nom etc.
-Avec @Bean on déclare explicitement une implémentation. On peut par exemple créé une espèce de factory : (impossible avec component)
-
-Attention, on ne peut plus utiliser l'AOP sur des instanciations de type @Bean.
-    => http://zezutom.blogspot.fr/2014/02/spring-series-part-5-component-vs-bean.html
-
-@Bean
-@Scope("prototype")
-public SomeService someService() {
-    switch (state) {
-    case 1:
-        return new Impl1();
-    case 2:
-        return new Impl2();
-    case 3:
-        return new Impl3();
-    default:
-        return new Impl();
-    }
-}
-
- --- Autowire / Qualifier / Resource
-
-Les deux fonctionne par recherche type. Mais autowire peut spécifier qu'il n'est pas obligatoire et resource permet de spécifier un nom de bean explicite.
-
-Autowire : Attention, définir 2 beans sur la même classe = autowired plante parcequ'il ne sait pas lequel prendre
- => démontrer.
-    1. Créer une classe MessageServiceAutreImpl qui implémente MessageService
-    2. Lancer l'appli. => plante.
-
-Et au final : setter ou constructeur pour déclarer les dépendances ?
-On peut mixer les deux. La logique veut qu'on mette en setter les dépendances facultatives et en constructeurs les obligatoires.
-
-Autowire / Qualifier (spring 3.0) sont des annotation spring qui peuvent être placé sur des constructeurs, setter, propriétés ...
-Resource est une annotation Java (compris par spring en spring 2.0) qui ne peut être placé que sur une propriété d'une classe. Mais ça fait la même chose.
-
-@Resource(name = "toto")
-private Toto toto;
-        ==
-@Autowired
-@Qualifier("toto")
-private Toto toto;
-
-Sur des injections de propriétés, il est préférable d'utiliser @Resource qui est un standard Java et qui est fait pour ça.
 
  --- scope
 
@@ -389,6 +282,7 @@ Exemple basé sur Basic Authen : https://www.mkyong.com/spring-security/spring-s
         - jms
         - Rest
         - ...
+
 
 
 ### 8. Petit quiz pour réaliser un résumé / rappel

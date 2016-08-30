@@ -1,138 +1,160 @@
 <!doctype html>
 <html lang="fr">
-	<head>
-		<meta charset="utf-8">
+<head>
+    <meta charset="utf-8">
 
-		<title>Comprendre Spring</title>
+    <title>Comprendre Spring</title>
 
-		<meta name="description" content="Formation générale sur le framework Spring">
-		<meta name="author" content="Tony MEMBOT">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="description" content="Formation générale sur le framework Spring">
+    <meta name="author" content="Tony MEMBOT">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-		<link rel="stylesheet" href="reveal-3.3.0/css/reveal.css">
-		<link rel="stylesheet" href="reveal-3.3.0/css/theme/sky.css" id="theme">
-		<link rel="stylesheet" href="reveal-3.3.0/lib/css/zenburn.css">
+    <link rel="stylesheet" href="reveal-3.3.0/css/reveal.css">
+    <link rel="stylesheet" href="reveal-3.3.0/css/theme/sky.css" id="theme">
+    <link rel="stylesheet" href="reveal-3.3.0/lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal-3.3.0/css/print/pdf.css' : 'reveal-3.3.0/css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'reveal-3.3.0/css/print/pdf.css' : 'reveal-3.3.0/css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
 
-		<!--[if lt IE 9]>
-		<script src="reveal-3.3.0/lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
+    <!--[if lt IE 9]>
+    <script src="reveal-3.3.0/lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
 
-                <!-- *************************************************************** -->
-                <!-- 0. Titre & plan -->
-                <!-- *************************************************************** -->
+        <!-- *************************************************************** -->
+        <!-- 0. Titre & plan -->
+        <!-- *************************************************************** -->
 
-				<section>
-					<h1>Comprendre Spring</h1>
-					<h3>Formation au Framework multi fonction</h3>
-					<p>
-						<small>Créé par Tony MEMBOT via l'API de présentation <a href="https://github.com/hakimel/reveal.js">Reveal.js</a></small>
-					</p>
+        <section>
+            <h1>Comprendre Spring</h1>
+            <h3>Formation au Framework multi fonction</h3>
+            <p>
+                <small>Créé par Tony MEMBOT via l'API de présentation <a href="https://github.com/hakimel/reveal.js">Reveal.js</a>
+                </small>
+            </p>
 
-                    <aside class="notes">
-                        Se présenter rapidement.<br />
-                        Leur demander de se présenter / niveau de connaissance en struts / spring.<br />
-                        Pas formation expert. Il faut fouiller / adapter.<br />
-                    </aside>
-				</section>
+            <aside class="notes">
+                Se présenter.<br/>
+                Leur domaine / niveau struts/spring/MVC/...<br/>
+                Pas formation expert. Il faut fouiller/adapter.<br/>
+            </aside>
+        </section>
 
-				<section>
-					<h2>Comprendre Spring</h2>
-					<ul>
-						<li>C'est quoi spring ?</li>
-						<li>Spring Core</li>
-						<li>Spring MVC</li>
-						<li>Spring Security</li>
-						<li>Spring Batch</li>
-						<li>Spring et ...
-                            <ul>
-                                <li>les tests unitaires</li>
-                                <li>AOP</li>
-                                <li>Spring boot</li>
-                                <li>...</li>
-                            </ul>
-                        </li>
-					</ul>
-				</section>
+        <section>
+            <h2>Comprendre Spring</h2>
+            <ul>
+                <li>C'est quoi spring ?</li>
+                <li>Spring Core</li>
+                <li>Spring MVC</li>
+                <li>Spring Security</li>
+                <li>Spring Batch</li>
+                <li>Spring et ...
+                    <ul>
+                        <li>les tests unitaires</li>
+                        <li>AOP</li>
+                        <li>Spring boot</li>
+                        <li>...</li>
+                    </ul>
+                </li>
+            </ul>
 
-                <!-- *************************************************************** -->
-                <!-- 1. C'est quoi Spring -->
-                <!-- *************************************************************** -->
+            <aside class="notes">
+            </aside>
+        </section>
 
-				<section>
+        <!-- *************************************************************** -->
+        <!-- 1. C'est quoi Spring -->
+        <!-- *************************************************************** -->
 
-                    <section>
-                        <h2>C'est quoi Spring ?</h2>
-                    </section>
+        <section>
 
-					<section>
-						<h3>Un conteneur léger</h3>
-                        <br />
-						<ul>
-							<li class="fragment">Framework reponsant sur 3 grands principes
-								<ul>
-									<li class="fragment">Inversion de contrôle</li>
-									<li class="fragment">Programmation orientée aspect</li>
-									<li class="fragment">Couche d'abstraction (pour d'autres API)</li>
-								</ul>
-							</li>
-                            <li class="fragment"><b>2003</b> : première version.</li>
-                            <li class="fragment"><b>2016</b> : version 5.0 incoming (4.2.3)</li>
-                            <li class="fragment"><b>Libre</b> : vos pull request sont attendus</li>
-						</ul>
+            <section>
+                <h2>C'est quoi Spring ?</h2>
 
-                        <aside class="notes">
-                            Inversion de contrôle = Injection de dépendance. (exemple par la suite)<br />
-                            Définir programmation orienté aspect => transversale.<br />
-                            Couche d'abstraction : Hibernate / quartz / velocity / jdbc / ...<br />
-                            <br />
-                            Entre chaque version il y a eu de nombreuses et importantes évolution.<br />
-                        </aside>
-					</section>
+                <aside class="notes">
+                </aside>
+            </section>
 
-                    <section>
-                        <!-- TODO : SCHEMA général sur spring -->
-                    </section>
-
-				</section>
-
-                <!-- *************************************************************** -->
-                <!-- 2. Spring core -->
-                <!-- *************************************************************** -->
-
-				<section>
-
-                    <section>
-                        <h2>Spring core</h2>
-                    </section>
-
-                    <section>
-                        <h3>C'est quoi l'Inversion of Control</h3>
-                        <br />
+            <section>
+                <h3>Un conteneur léger</h3>
+                <br/>
+                <ul>
+                    <li class="fragment">Framework reposant sur 3 grands principes
                         <ul>
-                            <li>Aujourd'hui plutôt nommé injection de dépendance</li>
-                            <li>Déresponsabilisation / Déspécialisation des classes</li>
-                            <li>On injecte dynamiquement les dépendances plutôt que de les écrire explicitement dans le code</li>
+                            <li class="fragment">Inversion de contrôle</li>
+                            <li class="fragment">Programmation orientée aspect</li>
+                            <li class="fragment">Couche d'abstraction (pour d'autres API)</li>
                         </ul>
+                    </li>
+                    <li class="fragment"><b>2003</b> : première version.</li>
+                    <li class="fragment"><b>2016</b> : 4.2.3</li>
+                    <li class="fragment"><b>Libre</b></li>
+                </ul>
 
-                    </section>
+                <aside class="notes">
+                    Inversion de contrôle = Injection de dépendance. (exemple par la suite)<br/>
+                    Définir programmation orienté aspect => transversale.<br/>
+                    Couche d'abstraction : Hibernate / quartz / velocity / jdbc / ...<br/>
+                    <br/>
+                    Entre chaque version il y a eu de nombreuses et importantes évolution.<br/>
+                </aside>
+            </section>
 
-                    <section>
-                        <pre><code data-trim>
+            <section>
+                <!-- TODO : SCHEMA général sur spring -->
+            </section>
+
+            <section>
+                <h2>Attention aux versions !</h2>
+                <h3>Une version majeure = grand ménage de printemps</h3>
+                <ul>La formation se base sur les version suivantes :
+                    <li>Spring Framework : 4.3.2.RELEASE</li>
+                    <li>Spring Security : 4.1.3.RELEASE</li>
+                </ul>
+
+                <aside class="notes">
+                    Certains parlent de massacre à la tronçonneuse mais évoluer est nécessaire.
+                </aside>
+            </section>
+
+        </section>
+
+        <!-- *************************************************************** -->
+        <!-- 2.1 Spring core -->
+        <!-- *************************************************************** -->
+
+        <section>
+
+            <section>
+                <h2>Spring core</h2>
+            </section>
+
+            <section>
+                <h3>C'est quoi l'Inversion of Control</h3>
+                <br/>
+                <ul>
+                    <li>Aujourd'hui renommé injection de dépendance</li>
+                    <li>Déresponsabilisation / Déspécialisation des classes</li>
+                    <li>On injecte dynamiquement les dépendances plutôt que de les écrire explicitement dans le code</li>
+                </ul>
+
+                <aside class="notes">
+                </aside>
+            </section>
+
+            <section>
+                <pre><code data-trim>
 /**
 * Pot qui contient une plante.
 */
@@ -150,128 +172,314 @@ public class Pot {
         this.plante = plante;
     }
 }
-                        </code></pre>
-                        <aside class="notes">
-                            Plante a ici la responsabilité de l'instanciation de la Tomate. Ca ne peut être que ça.<br />
-                            Si l'application évolue, ou on souhaite l'étendre, ou on souhaite mocker pour test => on doit modifier le code.<br />
-                        </aside>
-                    </section>
+                </code></pre>
+                <aside class="notes">
+                    Plante a ici la responsabilité de l'instanciation de la Tomate. Ca ne peut être que ça.<br/>
+                    Si l'application évolue, ou on souhaite l'étendre, ou on souhaite mocker pour test => on doit modifier le
+                    code.
+                </aside>
+            </section>
 
-                    <section>
-                        <h3>Exemple XML</h3>
-                        <br />
+            <section>
+                <h3>Exemple XML</h3>
+                <br/>
+                <ul>
+                    <li>Dépendances maven sur spring-context</li>
+                    <li>Un fichier xml de configuration principal</li>
+                    <li>Déclaration de bean et d'injection de dépendance via l'xml</li>
+                    <li>Chargement du context spring dans le main</li>
+                </ul>
+
+                <aside class="notes">
+                    Projet exemple : <b>springFormation_1</b>.<br/>
+                    Dépendance de context : https://mvnrepository.com/artifact/org.springframework/spring-context/4.3.2.RELEASE
+                    app / beans / core / expression.<br/>
+                    Il est possible de découper le fichier XML en réalisant des imports (Mais un seul point d'entrée).
+                </aside>
+            </section>
+
+            <section>
+                <h3>Exemple Annotation</h3>
+                <br/>
+                <ul>
+                    <li>Dépendances identiques</li>
+                    <li>Une classe de configuration principale</li>
+                    <li>Déclaration des beans et injection de dépendance via les annotations</li>
+                    <li>Chargement du context spring dans le main légèrement différent</li>
+                </ul>
+
+                <aside class="notes">
+                    Projet exemple : <b>springFormation_2</b>.<br/>
+                    On peut retrouver l'annotation @Bean aussi<br/>
+                    Ainsi, si dans messageServiceImpl on supprime le @Component, on peut déclarer dans la classe Application:<br/>
+                    <pre>
+                    @Bean
+                    public MessageServiceImpl messageService(){
+                        return new MessageServiceImpl();
+                    }
+                    </pre>
+                    Il est à noter que l'on peut avoir plusieurs @Configuration si on souhaite découper notre application.<br/>
+                    On peut réaliser des héritages / dépendances avec @Import(nomClass.class)<br/>
+                </aside>
+            </section>
+
+            <section>
+                <h3>Annotation ou XML ?</h3>
+                <ul>
+                    <li>Pas de best solution</li>
+                    <li>On peut quasi tout faire dans les deux solutions</li>
+                    <li>Utiliser le meilleur des deux : un mix, exemple
                         <ul>
-                            <li>Dépendance maven sur spring-context</li>
-                            <li>Un fichier de configuration principal</li>
-                            <li>Déclaration de bean et d'injection de dépendance via l'xml</li>
+                            <li>Annotation pour tout ce qui est <b>static</b></li>
+                            <li>XML pour tout ce qui est plus <b>dynamique</b></li>
                         </ul>
+                    </li>
+                    <li>Mais attention, la communauté tend vers le full annotation</li>
+                </ul>
 
-                        <aside class="notes">
-                            Projet exemple : <b>springFormation_1</b>.<br />
-                            Dépendance de context : https://mvnrepository.com/artifact/org.springframework/spring-context/4.3.2.RELEASE
-                            app / beans / core / expression.<br />
-                            Il est possible de découper le fichier XML en réalisant des imports (Mais un seul d'entrée).
-                        </aside>
-                    </section>
+                <aside class="notes">
+                </aside>
+            </section>
 
-                    <section>
-                        <h3>Exemple Annotation</h3>
-                        <br />
+        </section>
+
+        <!-- *************************************************************** -->
+        <!-- 2.2 Déclaration d'un bean -->
+        <!-- *************************************************************** -->
+
+        <section>
+
+            <section>
+                <h3>@Component</h3>
+                <ul>
+                    <li>Sur la classe VoitureDeCourse va créé un bean nommé "voitureDeCourse"</li>
+                    <li>On peut préciser ce nom <code data-trim>@Component(value = "voiture2course")</code></li>
+                    <li>@Service, @Controller, @Repository sont des spécialisations</li>
+                    <li>On laisse spring géré l'instanciation</li>
+                </ul>
+
+                <aside class="notes">
+                    @Service, ... sont des spécialisations dans le but d'utiliser l'AOP.
+                </aside>
+            </section>
+
+            <section>
+                <h3>@Bean</h3>
+                <ul>
+                    <li>Disponbile uniquement si on utilise @Configuration</li>
+                    <li>Sur la méthode myVoitureDeCourse va créé un bean nommé "myVoitureDeCourse"</li>
+                    <li>On peut préciser ce nom <code data-trim>@Bean(name={"voiture2course"})</code></li>
+                    <li>C'est le développeur qui gère l'instanciation</li>
+                </ul>
+
+                <aside class="notes">
+                    Attention, on ne peut plus utiliser l'AOP sur des instanciations de type @Bean.
+                    => http://zezutom.blogspot.fr/2014/02/spring-series-part-5-component-vs-bean.html
+                    @Autowired peut injecter un @Bean
+                </aside>
+            </section>
+
+            <section>
+                <h3>@Bean factory</h3>
+                <pre><code data-trim>
+@Bean
+@Scope("prototype")
+public SomeService someService() {
+    switch (state) {
+        case 1:
+            return new Impl1();
+        case 2:
+            return new Impl2();
+        case 3:
+            return new Impl3();
+        default:
+            return new Impl();
+    }
+}
+                </code></pre>
+
+                <aside class="notes">
+                    Ce cas peut être utile pour du mock par exemple, ou pour instancier des classes différentes selon un
+                    environnement ...<br/>
+                    La différence entre les deux est ténu. On préfera garder @Component généralement.
+                </aside>
+            </section>
+
+        </section>
+
+        <!-- *************************************************************** -->
+        <!-- 2.3 Injection de dépendance -->
+        <!-- *************************************************************** -->
+
+        <section>
+
+            <section>
+                <h3>Spring MVC</h3>
+
+                <aside class="notes">
+                </aside>
+            </section>
+
+            <section>
+                <h3>@Autowired</h3>
+
+                <ul>
+                    <li>Injection par <b>type</b></li>
+                    <li>Et si on a deux implémentation de la même interface ? => Démonstration</li>
+                    <li>Avec <code data-trim>@Qualifier("name")</code> : Injection par <b>nom</b></li>
+                    <li>Peut préciser qu'il n'est pas obligatoire <code>@Autowired(required = false)</code></li>
+                    <li>Annotations spring</li>
+                </ul>
+
+                <aside class="notes">
+                    Démonstration : <br />
+                    1. Créer une classe MessageServiceAutreImpl qui implémente MessageService<br />
+                    2. Lancer l'appli. => plante.<br />
+                </aside>
+            </section>
+
+            <section>
+                <h4>@Resource</h4>
+
+                <ul>
+                    <li>Injection par <b>type</b></li>
+                    <li>Même soucis sur la double implémentation que @Component</li>
+                    <li>Avec <pre><code data-trim>@Resource(name = "name")</code></pre> : Injection par <b>nom</b></li>
+                    <li>Annotation Java</li>
+                </ul>
+
+                <aside class="notes">
+                    Démonstration : <br />
+                    1. Créer une classe MessageServiceAutreImpl qui implémente MessageService<br />
+                    2. Lancer l'appli. => plante.<br />
+                </aside>
+            </section>
+
+            <section>
+                <pre><code data-trim>
+@Resource(name = "toto")
+private Toto toto;
+                </code></pre>
+                <p>==</p>
+                <pre><code data-trim>
+@Autowired
+@Qualifier("toto")
+private Toto toto;
+                </code></pre>
+
+                <aside class="notes">
+                </aside>
+            </section>
+
+            <section>
+                <h4>@Resource ou @Autowired ?</h4>
+                <p>Sur des injections de propriétés, il est préférable d'utiliser @Resource qui est un standard Java et qui est fait pour ça.</p>
+                <h4>Setter ou constructeur ?</h4>
+                <p>On peut mixer les deux. La logique veut qu'on mette en setter les dépendances facultatives et en constructeurs les obligatoires.</p>
+
+                <aside class="notes">
+                </aside>
+            </section>
+
+        </section>
+        <!-- *************************************************************** -->
+        <!-- 3. Spring MVC -->
+        <!-- *************************************************************** -->
+
+        <section>
+
+            <section>
+                <h2>Spring MVC</h2>
+            </section>
+
+            <section>
+                <h3>MVC : un petit rappel</h3>
+                <!-- TODO : inclure schéma MVC et rappel image découpage module spring -->
+            </section>
+        </section>
+
+        <!-- *************************************************************** -->
+        <!-- 7. Spring plus loin -->
+        <!-- *************************************************************** -->
+
+        <section>
+
+            <section>
+                <h2>Aller plus loin dans Spring</h2>
+            </section>
+
+            <section>
+                <h3>Spring 5</h3>
+                <ul>
+                    <li>Release prévu en Mars 2017</li>
+                    <li>Niveau de compatibilité drastiquement augmenté
                         <ul>
-                            <li>Dépendance identique</li>
-                            <li>Une classe de configuration principale</li>
-                            <li>Déclaration des beans et injection de dépendance via les annotations</li>
+                            <li>Java 8+</li>
+                            <li>Hibernate 5+</li>
+                            <li>JPA 2.1+</li>
+                            <li>Inclusion de spring reactive</li>
                         </ul>
+                    </li>
+                </ul>
 
-                        <aside class="notes">
-                            Projet exemple : <b>springFormation_2</b>.<br />
-                            On peut retrouver l'annotation @Bean aussi<br />
-                            <br />
-                            Ainsi, si dans messageServiceImpl on supprime le @Component, on peut déclarer dans la classe Application :<br />
-                            <pre>
-                            @Bean
-                            public MessageServiceImpl messageService(){
-                                return new MessageServiceImpl();
-                            }
-                            </pre>
-                            Il est à noter que l'on peut avoir plusieurs @Configuration si on souhaite découper notre application.<br />
-                            On peut réaliser des héritages / dépendances avec @Import(nomClass.class)<br />
-                        </aside>
-                    </section>
+                <aside class="notes">
+                    spring reactive => Programmation réactive = programmation avec des flux de données asynchrones
+                    http://home.heeere.com/tech-intro-programmation-reactive.html
+                </aside>
+            </section>
 
-                    <section>
-                        <h3>Annotation ou XML ?</h3>
-                        <ul>
-                            <li>Pas de best solution</li>
-                            <li>En XML : on ne peut pas faire de bean dynamique</li>
-                            <li>En Annotation : on ne peut </li>
-                            <li>Utiliser le meilleur des deux : un mix</li>
-                            <li>La tendance est tout de même à l'annotation pour tout ce </li>
-                        </ul>
+            <section>
+                <h3>Spring 5</h3>
+                <li>Abandon du support de nombreuses librairies :
+                    <ul>
+                        <li>PortletMVC</li>
+                        <li>JDO</li>
+                        <li>Guava caching</li>
+                        <li>JasperReports</li>
+                        <li>OpenJPA</li>
+                        <li>Tiles 2</li>
+                        <li>XMLBeans</li>
+                        <li>Velocity</li>
+                    </ul>
+                </li>
+            </section>
+        </section>
 
-                        <aside class="notes">
-                            Dépendance de context : https://mvnrepository.com/artifact/org.springframework/spring-context/4.3.2.RELEASE<br />
-                        </aside>
-                    </section>
+    </div> <!-- End div slide -->
 
-                    <section>
-                        <h3>Quelques précisions sur @Component</h3>
-                        <ul>
-                            <li>Sur la classe VoitureDeCourse va créé un bean nommé "voitureDeCourse"</li>
-                            <li></li>
-                            <li></li>
-                        </ul>
+</div> <!-- End div Reveal -->
 
-                        <aside class="notes">
-                            Dépendance de context : https://mvnrepository.com/artifact/org.springframework/spring-context/4.3.2.RELEASE<br />
-                        </aside>
-                    </section>
+<!-- Scripts insertions -->
+<script src="reveal-3.3.0/lib/js/head.min.js"></script>
+<script src="reveal-3.3.0/js/reveal.js"></script>
 
-                </section>
+<script>
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
 
-                <!-- *************************************************************** -->
-                <!-- 2. Spring MVC -->
-                <!-- *************************************************************** -->
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-                <section>
-
-                    <section>
-                        <h2>Spring MVC</h2>
-                    </section>
-
-                    <section>
-                        <h3>MVC : un petit rappel</h3>
-                        <!-- TODO : inclure schéma MVC et rappel image découpage module spring -->
-                    </section>
-                </section>
-
-			</div> <!-- End div slide -->
-
-		</div> <!-- End div Reveal -->
-
-		<!-- Scripts insertions -->
-		<script src="reveal-3.3.0/lib/js/head.min.js"></script>
-		<script src="reveal-3.3.0/js/reveal.js"></script>
-
-		<script>
-			// Full list of configuration options available at:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
-
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
-
-				// Optional reveal.js plugins
-				dependencies: [
-					{ src: 'reveal-3.3.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'reveal-3.3.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'reveal-3.3.0/plugin/zoom-js/zoom.js', async: true },
-					{ src: 'reveal-3.3.0/plugin/notes/notes.js', async: true }
-				]
-			});
-		</script>
-	</body>
+        // Optional reveal.js plugins
+        dependencies: [
+            {
+                src: 'reveal-3.3.0/lib/js/classList.js', condition: function () {
+                return !document.body.classList;
+            }
+            },
+            {
+                src: 'reveal-3.3.0/plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            }
+            },
+            {src: 'reveal-3.3.0/plugin/zoom-js/zoom.js', async: true},
+            {src: 'reveal-3.3.0/plugin/notes/notes.js', async: true}
+        ]
+    });
+</script>
+</body>
 </html>
