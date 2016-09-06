@@ -381,6 +381,57 @@ private Toto toto;
                 </aside>
             </section>
 
+            <section>
+                <h4>Le scope d'injection</h4>
+                <ul>
+                    <li class="fragment">Modifions un peu le projet Spring2 ...</li>
+                    <li class="fragment">Par défaut tout est singleton !</li>
+                    <li class="fragment">
+                        <ul>
+                            <li>Singleton</li>
+                            <li>Prototype</li>
+                            <li>Request *</li>
+                            <li>Session *</li>
+                            <li>GlobalSession *</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <aside class="notes">
+                    Faire un test sur formationSpring_2 en ajoutant un 2ème service dans MessagePrinter.
+                    Puis ajouter dans l'appel d'affichage
+                    System.out.println(service2.getMessage());
+                    service2.setMessage("message modifié");
+                    System.out.println(service.getMessage());
+                    System.out.println(service2.getMessage());
+
+                    * = que dans spring web.
+                    Ajouter => @Scope("prototype")
+                </aside>
+            </section>
+
+            <section>
+                <h4>Injection de collections</h4>
+                <ul class="fragment">
+                    <li>list</li>
+                    <li>set</li>
+                    <li>map</li>
+                    <li>props</li>
+                </ul>
+                <ul>
+                    <li class="fragment"></li>
+                    <li class="fragment">Tout est string dans un fichier xml ...</li>
+                    <li class="fragment">... mais il existe des converter automatique</li>
+                    <li class="fragment">Et l'injection d'une valeur null ?</li>
+                    <li class="fragment"><pre><code data-trim><value><null/></value></code></pre></li>
+                </ul>
+
+                <aside class="notes">
+                    Exemple avec le projet spring 3.
+                    L'utilité de tout ça ? notamment pour injecter des listes de beans / référence.
+                    Injecter null ? "" représentant une chaîne vide ?
+                </aside>
+            </section>
         </section>
         <!-- *************************************************************** -->
         <!-- 3. Spring MVC -->
