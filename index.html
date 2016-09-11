@@ -90,7 +90,7 @@
                 <h3>Un conteneur léger</h3>
                 <br/>
                 <ul>
-                    <li class="fragment">Framework reposant sur 3 grands principes
+                    <li>Framework reposant sur 3 grands principes
                         <ul>
                             <li class="fragment">Inversion de contrôle</li>
                             <li class="fragment">Programmation orientée aspect</li>
@@ -112,7 +112,7 @@
             </section>
 
             <section>
-                <!-- TODO : SCHEMA général sur spring -->
+                <img src="img/spring-overview.png" style="border:0">
             </section>
 
             <section>
@@ -155,26 +155,22 @@
 
             <section>
                 <pre><code data-trim>
-/**
-* Pot qui contient une plante.
-*/
-public class Pot {
-    /** Plante dans le pot */
-    private Plante plante;
+public class Parking {
+    private Voiture voiture;
 
-    /** Constructeur qui crée une plante spécifique: pas d'IoC */
-    public Pot() {
-        plante = new Tomate();
+    /** Constructeur qui crée une voiture spécifique: pas d'IoC */
+    public Parking() {
+        voiture = new Clio();
     }
 
-    /** Constructeur avec plante: compatible IoC */
-    public Pot(Plante plante) {
-        this.plante = plante;
+    /** Constructeur avec voiture: compatible IoC */
+    public Parking(Voiture voiture) {
+        this.voiture = voiture;
     }
 }
                 </code></pre>
                 <aside class="notes">
-                    Plante a ici la responsabilité de l'instanciation de la Tomate. Ca ne peut être que ça.<br/>
+                    Parking a ici la responsabilité de l'instanciation de la Clio. Ca ne peut être que ça.<br/>
                     Si l'application évolue, ou on souhaite l'étendre, ou on souhaite mocker pour test => on doit modifier le
                     code.
                 </aside>
@@ -266,7 +262,7 @@ public class Pot {
             <section>
                 <h3>@Bean</h3>
                 <ul>
-                    <li>Disponbile uniquement si on utilise @Configuration</li>
+                    <li>Disponible uniquement si on utilise @Configuration</li>
                     <li>Sur la méthode myVoitureDeCourse va créé un bean nommé "myVoitureDeCourse"</li>
                     <li>On peut préciser ce nom <code data-trim>@Bean(name={"voiture2course"})</code></li>
                     <li>C'est le développeur qui gère l'instanciation</li>
@@ -433,19 +429,226 @@ private Toto toto;
                 </aside>
             </section>
         </section>
+
+        <!-- *************************************************************** -->
+        <!-- 2.4 Plus loin dans la configuration des beans -->
+        <!-- *************************************************************** -->
+
+        <section>
+            <section>
+                <h2>Customiser ses beans</h2>
+            </section>
+
+            <section>
+                <h3>init-method</h3>
+                <pre><code data-trim><bean id="..." class="..." init-method="..."></code></pre>
+
+                <aside class="notes">
+                    Modifier le projet 1 pour ajouter une init method à messageserviceimpl qui changerait le message par exemple.
+                </aside>
+            </section>
+
+            <section>
+                <h3>L'héritage / Surcharge des beans</h3>
+<pre><code data-trim>
+<bean id="helloworld" class="fr.tuto.helloworld">
+    <property name="message1" value="hello world!"></property>
+    <property name="message2" value="hello second world!"></property>
+</bean>
+
+<bean id="helloindia" class="fr.tuto.helloindia" parent="helloworld">
+   <property name="message1" value="hello india!"></property>
+   <property name="message3" value="namaste india!"></property>
+</bean>
+</code></pre>
+
+                <aside class="notes">
+                    On peut rendre un bean abstract="true" sans définir de class (sera pas instancié par Spring)
+                    http://www.tutorialspoint.com/spring/spring_bean_definition_inheritance.htm
+                </aside>
+            </section>
+        </section>
+
+        <section>
+            <h3>Testons !</h3>
+            <ol style="font-size:90%;">
+                <li>Instancier via un new (projet 1)</li>
+                <li>Complétons le projet Exo 1 ...
+                    <ul>
+                        <li>Créer les beans des voitures clio / ferrari / lotus</li>
+                        <li>Créer deux parking
+                            <ul>
+                                <li>Concession : avec deux clio, une ferrari, deux lotus</li>
+                                <li>Occasion : avec deux clio, une lotus</li>
+                            </ul>
+                        </li>
+                        <li>Les parking initialisent les niveaux d'essences via initEssence()</li>
+                        <li>Créer le bean garage référençant les deux parking et le commercial</li>
+                        <li>GarageApplication doit tourner !</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <aside class="notes">
+                1. L'objet est hors contexte, pas d'initialisation de variable etc. erreur courante au début !<br/>
+                2. voiture ne doit pas être instancié, les voitures = prototype<br />
+                Montrer exemple spEL
+            </aside>
+        </section>
+
+        <!-- *************************************************************** -->
+        <!-- 2.5 Spring properties -->
+        <!-- *************************************************************** -->
+
+        <section>
+            <section>
+                <h3>Spring properties</h3>
+
+                <ul>
+                    <li>Externaliser les données "changeantes" / technique</li>
+                    <li>Chargement de properties dans le context spring</li>
+                    <li>Récupération des valeurs directement dans l'initialisation d'un bean ou via un @value</li>
+                    <li>Possibilité de mettre en place un système de surcharge</li>
+                    <li>Possibilité de mettre des valeurs par défaut</li>
+                </ul>
+
+                <aside class="notes">
+                    exemple du projet 4.
+                    pour utiliser la variable, déclarer dans les arguments vm : -Dproject.home=c:/
+                    rajouter une valeur par défaut : :c:/conf/
+                </aside>
+            </section>
+        </section>
+
         <!-- *************************************************************** -->
         <!-- 3. Spring MVC -->
         <!-- *************************************************************** -->
 
         <section>
-
             <section>
-                <h2>Spring MVC</h2>
+                <h2>Spring Web (MVC)</h2>
             </section>
 
             <section>
                 <h3>MVC : un petit rappel</h3>
-                <!-- TODO : inclure schéma MVC et rappel image découpage module spring -->
+                <img src="img/MVC_2.png"/>
+
+                <aside class="notes">
+                    découpage de responsabilité ...
+                </aside>
+            </section>
+
+            <section>
+                <h3>Spring & le web</h3>
+                <img src="img/mvc.png"/>
+
+                <aside class="notes">
+                    spring mvc est une spécialisation de spring qui donne des outils pour gérer des pages web.
+                </aside>
+            </section>
+        </section>
+
+        <!-- *************************************************************** -->
+        <!-- 3.1 Dispatcher -->
+        <!-- *************************************************************** -->
+
+        <section>
+            <section>
+                <h2>Le dispatcher</h2>
+            </section>
+
+            <section>
+                <h3>Le dispatcher</h3>
+                <ul>
+                    <li>Spring web tourne autour du servletdispatcher (remplace notre main)</li>
+                    <li>Chef d'orchestre des appels HTTP et de leurs traitements</li>
+                </ul>
+
+                <aside class="notes">
+                </aside>
+            </section>
+
+            <section>
+                <h3>Request HTTP basique</h3>
+                <img src="img/spring_dispatcherservlet.png">
+
+                <ol>
+                    <li>Récupération du bon controller</li>
+                    <li>Aiguillage (POST/GET) & préparatop, les datas</li>
+                    <li>Récupération de la bonne view (JSP, ...)</li>
+                    <li>Fusion des datas dans la view</li>
+                </ol>
+
+                <aside class="notes">
+                    1. Après l'avoir reçu, DispatcherServlet consulte HandlerMapping pour appelerle bon Controller.<br/>
+                    2. Le Controller gère la request et appel la bonne méthode (GET / POST) et prépare les objets qui vont alimentés le model ainsi que le nom du modèle.<br/>
+                    3. Le DispatcherServlet utilise le ViewResolver pour récupérer la bonne view.<br/>
+                    4. Le DispatcherServlet fusione les datas avec la view et retourne le résultat.<br/>
+                </aside>
+            </section>
+            
+            <section>
+                <h3>Explorons le projet spring 5 ...</h3>
+
+                <aside class="notes">
+                    lancer l'appli et accéder à http://localhost:8080/hello (si lancer depuis intellij)<br/>
+                    web.xml => dispatcher servlet<br/>
+                    hellocontroller => @controller @requestmapping<br/>
+                    hello-servlet<br/>
+                    => spring recherche automatiquement le fichier {{nomservlet}}-servlet.xml<br/>
+                    => on peut lui préciser d'autres noms dans le web.xml<br/>
+                    => contient la ligne de scan pour les controller<br/>
+                    => contient un résolver permettant de rediriger vers nos ressources jsp.<br/>
+                    => le resolver peut implémenter des framework de view comme tiles / velocity / ...v
+                </aside>
+            </section>
+        </section>
+
+        <!-- *************************************************************** -->
+        <!-- 3.2 Spring EL -->
+        <!-- *************************************************************** -->
+
+        <section>
+
+            <section>
+                <h3>Spring EL</h3>
+
+                <ul>
+                    <li>EL = Expression Language</li>
+                    <li>Spring EL = EL au niveau injection / context spring</li>
+                    <li>Explorons le projet spring 6 ...</li>
+                </ul>
+
+                <aside class="notes">
+                    localhost:8080/hello & localhost:8080/hello/toto<br/>
+                    spring-el est déjà en dépendance de webmvc<br/>
+                    dépendance : ne pas oublier d'ajouter javax.servlet<br/>
+                    <br/>
+
+                    attention à la vieille erreur que les paramètres ne s'affichent pas sur les jsp
+                    https://www.mkyong.com/spring-mvc/modelandviews-model-value-is-not-displayed-in-jsp-via-el/
+                    (web.xml) el ne marche pas :
+<pre><code  data-trim>
+<!doctype web-app public
+"-//sun microsystems, inc.//dtd web application 2.3//en"
+"http://java.sun.com/dtd/web-app_2_3.dtd" >
+</code></pre>
+                    (web.xml) el marche  :
+<pre><code  data-trim>
+<web-app id="webapp_id" version="2.4"
+         xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/xmlschema-instance"
+         xsi:schemalocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+</web-app>
+</code></pre>
+                </aside>
+            </section>
+
+            <section>
+                <h3></h3>
+
+                <aside class="notes">
+                </aside>
             </section>
         </section>
 

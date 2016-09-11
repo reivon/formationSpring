@@ -5,88 +5,13 @@ spring framework : http://projects.spring.io/spring-framework/
 getting started : https://docs.spring.io/spring/docs/current/spring-framework-reference/html/overview-getting-started-with-spring.html
 
 
-### 1. spring core
-
 todo : appel ajax en mvc
-
-
-
- --- init-method
-
-par défaut on appel le constructeur sans paramètre. on peut vouloir initialiser un appel :  <bean id="..." class="..." init-method="...">
-modifier l'un des projets pour ajouter une init method à messageserviceimpl qui changerait le message par exemple.
-
-
- --- appeler un new
-
-essayons de faire un new plutôt que d'instancier via spring
-    => l'objet est hors contexte, pas d'initialisation de variable etc. erreur courante au début !
-
-
- --- héritage de bean + parent (http://www.tutorialspoint.com/spring/spring_bean_definition_inheritance.htm)
-
-il est possible de réaliser de l'héritage entre bean, mais ça n'a pas le même sens que pour java.
-ce n'est que de l'héritage au niveau de la configuration des beans.
-    <bean id="helloworld" class="com.tutorialspoint.helloworld"> // peut le rendre abstract="true" sans définir de class
-       <property name="message1" value="hello world!"/>
-       <property name="message2" value="hello second world!"/>
-    </bean>
-
-    <bean id="helloindia" class="com.tutorialspoint.helloindia" parent="helloworld">
-       <property name="message1" value="hello india!"/>
-       <property name="message3" value="namaste india!"/>
-    </bean>
-
-
-=> exercice final : création d'un concessionnaire ? (basé sur l'exemple des plantes).
-    concessionnaire qui possède deux parcelles (parking interne et parking extérieur)
-    chaque parking accueille des vehicules d'un certain noms (zoé / mégane)
-
-
-### 2. spring properties
-
-    exemple du projet 4.
-
-    on peut récupérer les valeurs directement dans l'initialisation d'un bean ou via un @value.
-
-    pour utiliser la variable, déclarer dans les arguments vm : -dproject.home=c:/
-    rajouter une valeur par défaut : :c:/conf/
 
 
 ###  3. spring mvc
 
- 3.1 rappel mvc
-
-    découpage de responsabilité ...
-    c'est comme struts.
-
- 3.2 pattern dispatcher de base (servlet web.xml @controler / model / resolver)
-
-    spring mvc est une spécialisation de spring qui donne des outils pour gérer des pages web.
-    tout tourne autour du servletdispatcher (remplace notre main)
-
-    prendre l'image de http://www.tutorialspoint.com/spring/spring_web_mvc_framework.htm sur les étapes
-    ainsi que les explications
-
-    spring-web => étend le core
-    spring-webmvc => ajoute la couche mvc
-
-    prendre exemple du projet spring 5 : localhost:8080/hello
-        lancer l'appli et accéder à http://localhost:8080/hello (si lancer depuis intellij)
-        web.xml => dispatcher servlet
-        hellocontroller => @controller @requestmapping
-        hello-servlet
-            => spring recherche automatiquement le fichier {{nomservlet}}-servlet.xml
-            => on peut lui préciser d'autres noms dans le web.xml
-            => contient la ligne de scan pour les controller
-            => contient un résolver permettant de rediriger vers nos ressources jsp.
-                => le resolver peut implémenter des framework de view comme tiles / velocity / ...
 
  3.3 spring el
-
-    prendre exemple du projet spring 6 : localhost:8080/hello & localhost:8080/hello/toto
-        dépendance : ne pas oublier d'ajouter javax.servlet
-        spring-el est déjà en dépendance de webmvc
 
     -- piège :
 
