@@ -644,8 +644,97 @@ private Toto toto;
                 </aside>
             </section>
 
+        </section>
+
+        <!-- *************************************************************** -->
+        <!-- 3.3 Ressource static -->
+        <!-- *************************************************************** -->
+
+        <section>
+            <section>
+                <h3>Les ressources statiques</h3>
+
+                <ul>
+                    <li>Si tout est résolu par le resolver .. tout est jsp ?</li>
+                    <li class="fragment">Et les js, css ?</li>
+                    <li class="fragment">Spring peut définir un context de ressource static</li>
+                    <li class="fragment">Exemple dans le projet spring 6 ..</li>
+                </ul>
+
+                <aside class="notes">
+                    Exemple de spring 6 : localhost:8080/index
+                    On a ajouté dans le servlet.xml
+                        mvc:resources ...
+                        mvc:annotation-driven ...
+                    Et dans hello.jsp ajout des références et utilisation de taglib.
+                </aside>
+            </section>
+        </section>
+
+        <!-- *************************************************************** -->
+        <!-- 3.4 Redirect & Forward -->
+        <!-- *************************************************************** -->
+
+        <section>
+            <section>
+                <h3>Redirect & Forward</h3>
+
+                <ul>
+                    <li>Toujours utile pour le pattern POST/Redirect/GET pour gérer les submit multiple</li>
+                    <li>Redirect = retour vers le navigateur avec une réponse http 302 (redirection) vers la nouvelle url. => on perd la request</li>
+                    <li>Forward = redirection interne au serveur, transparente pour le navigateur et l'utilisateur => on conserve la request</li>
+                    <li>
+                        Depuis la 3.1, Spring intègre les RedirectAttributes ...<br/>
+                        http://www.tikalk.com/redirectattributes-new-feature-spring-mvc-31/
+                    </li>
+                    <li>Exemple dans le projet spring 7 ..</li>
+                </ul>
+
+                <aside class="notes">
+                    exemple du projet 7 : localhost:8080/index
+                    RedirectAttributes = flash attribute = marche pour 1 seul redirect.
+                    F5 et tout disparaît => http://www.tikalk.com/redirectattributes-new-feature-spring-mvc-31/
+                </aside>
+            </section>
+        </section>
+
+        <!-- *************************************************************** -->
+        <!-- 3.5 Signature controller dynamique -->
+        <!-- *************************************************************** -->
+
+        <section>
+            <section>
+                <h3>Controller - signature dynamique</h3>
+
+                <ul>
+                    <li>Comment récupérer la request ? la response ? via l'injection spring</li>
+                    <li>http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html#mvc-ann-arguments</li>
+                </ul>
+
+                <aside class="notes">
+                    Exemple projet 7
+                    http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html#mvc-ann-arguments
+                    HttpServletResponse response
+                    TimeZone timezone
+                </aside>
+            </section>
+        </section>
+
+        <!-- *************************************************************** -->
+        <!-- 3.5 Gestion des formulaires -->
+        <!-- *************************************************************** -->
+
+        <section>
+            <section>
+                <h2>Gestion des formulaires</h2>
+            </section>
+
             <section>
                 <h3></h3>
+
+                <ul>
+                    <li></li>
+                </ul>
 
                 <aside class="notes">
                 </aside>

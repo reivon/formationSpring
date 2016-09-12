@@ -11,38 +11,7 @@ todo : appel ajax en mvc
 ###  3. spring mvc
 
 
- 3.3 spring el
 
-    -- piège :
-
-    attention à la vieille erreur que les paramètres ne s'affichent pas sur les jsp
-        https://www.mkyong.com/spring-mvc/modelandviews-model-value-is-not-displayed-in-jsp-via-el/
-    (web.xml) el ne marche pas :
-       <!doctype web-app public
-            "-//sun microsystems, inc.//dtd web application 2.3//en"
-            "http://java.sun.com/dtd/web-app_2_3.dtd" >
-    (web.xml) el marche :
-        <web-app id="webapp_id" version="2.4"
-            xmlns="http://java.sun.com/xml/ns/j2ee"
-            xmlns:xsi="http://www.w3.org/2001/xmlschema-instance"
-            xsi:schemalocation="http://java.sun.com/xml/ns/j2ee
-            http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
-
- 3.4 spring resource static
-
-    spring défini un context de ressource static (pour ne pas être pris en compte par le resolver notamment.
-    prendre l'exemple de spring 6. ajout dans le servlet.xml de
-        <mvc:resources mapping="/resources/**" location="/resources/"/>
-        <mvc:annotation-driven/>
-    dans hello.jsp ajout des références et utilisation de taglib.
-
- 3.5 redirect et forward
-
-    exemple du projet 7 : localhost:8080/index
-    => sur le redirect, on retourne directement sur le navigateur avec une réponse http 302 qui provoque une redirection vers la nouvelle url. => on perd la request !
-    => pour ne pas perdre la request : forward
-    => on montre que les signatures sont dynamiques, liste des variables possibles :
-        http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html#mvc-ann-arguments
 
  3.6 gérer un formulaire
 
