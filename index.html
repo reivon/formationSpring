@@ -730,6 +730,155 @@ private Toto toto;
             </section>
 
             <section>
+                <h3>Formulaire de saisie</h3>
+
+                <ul>
+                    <li>Utilisation d'une taglib pour le form</li>
+                    <li>Passage des data par un bean nommé "command" par défaut (paramétrable)</li>
+                    <li>Le submit popule ce bean que l'on récupère dans le controller</li>
+                    <li>Exemple dans le projet spring 8 ..</li>
+                </ul>
+
+                <aside class="notes">
+                    exemple du projet formationspring_8 :
+                    objet "command" = bean (attention aux setter / getter)
+                    nom du bean paramétrable
+                </aside>
+            </section>
+
+            <section>
+                <h3>Gestion des autres input</h3>
+
+                <ul>
+                    <li><!-- TODO - SELECT / TEXTAREA / CHECKBOX --></li>
+                    <li>Norme HTML => un checkbox décoché n'est pas envoyé dans le post</li>
+                </ul>
+
+                <aside class="notes">
+                </aside>
+            </section>
+
+            <section>
+                <h3>Upload de fichier</h3>
+
+                <ul>
+                   <li><!-- TODO --></li>
+                </ul>
+
+                <aside class="notes">
+                </aside>
+            </section>
+
+            <section>
+                <h3>Spring message / internationalisation</h3>
+
+                <ul>
+                    <li>Utilisation d'un message resource : ReloadableResourceBundleMessageSource</li>
+                    <li>Injection du bean dans les classes Java</li>
+                    <li>Utilisation de la taglib spring:message pour les JSP</li>
+                    <li>Internationalisation :
+                        <ul>
+                            <li>Gérer par défaut par la locale http (navigateur)</li>
+                            <li>Gestion de priorité de la locale : application_fr_fr / application_fr / application</li>
+                        </ul>
+                    </li>
+                    <li>Exemple dans le projet spring 9 ..</li>
+                </ul>
+
+                <aside class="notes">
+                    exemple du projet formationspring_9
+                    on a ajouté un resolver ainsi qu'un interceptor, via l'url on peut changer la locale.
+                        http://localhost:8080/student
+                        http://localhost:8080/student?locale=en
+                    De manière native c'est géré par le accept language de la requête http.
+                    Fichiers externe à l'application ? file:/usr/local/conf/app/messages/messages
+                </aside>
+            </section>
+
+            <section>
+                <h3>Valider les informations d'un formulaire</h3>
+                <h4>Pré version spring 4.X</h4>
+
+                <ul>
+                    <li>Librairie externe implémentant jsr-303/jsr-349 bean validation, exemple :</li>
+                    <li>
+                        <pre><code  data-trim>
+<dependency>
+    <groupid>javax.validation</groupid>
+    <artifactid>validation-api</artifactid>
+    <version>1.0.0.ga</version>
+</dependency>
+<dependency>
+    <groupid>org.hibernate</groupid>
+    <artifactid>hibernate-validator</artifactid>
+    <version>4.1.0.final</version>
+</dependency>
+                        </code></pre>
+                    </li>
+                    <li>Exemple complet dans ce lien : http://blog.netapsys.fr/spring-mvc-formulaires-et-validations-par-la-norme-jsr-303-bean-validation/</li>
+                </ul>
+
+                <aside class="notes">
+                    C'est classique et bien détaillé, voyons plutôt la solution spring.
+                </aside>
+            </section>
+
+            <section>
+                <h3>Valider les informations d'un formulaire</h3>
+                <h4>Post version 4.X</h4>
+
+                <ul>
+                    <li>Spring réalise son implémentation avec @validated</li>
+                    <li>Création de classe implémentant l'interface Validator</li>
+                    <li>Utilisation de form:error pour remonter les erreurs</li>
+                    <li>Exemple dans le projet Spring 10 ..</li>
+                </ul>
+
+                <aside class="notes">
+                    <pre>
+                    http://www.mkyong.com/spring-mvc/spring-mvc-form-handling-example/
+                    Projet Spring 10 = Spring 8 + validation.
+                        on rajoute l'email pour montrer les dépendances de validator.
+                        Ajout de deux validator
+                        Ajout du tag form:error dans la jsp du formulaire
+                        Modification du controller pour déclencher le validator
+                        détail sur le messageressource => on a plusieurs fichiers de messageresource maintenant.
+                            note : il y a un ordre d'application. le dernier prend le pas sur les suivant.
+                            permet de faire du fallback. on charge d'abord le fichier dans l'appli puis un externe par exemple.
+
+                    Attention ! dans le controller, l'attribut bindingresult result doit obligatoirement être placé juste après le modelattribute à valider.
+                    sinon erreur 400 ! c'est le seul paramètre qui a une place conditionné au niveau des controlleurs spring.
+                    => http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html#mvc-ann-methods
+                    </pre>
+                </aside>
+            </section>
+
+            <section>
+                <h3>Filter encoding</h3>
+
+                <ul>
+                    <li>Filtre au niveau spring</li>
+                    <li>Permet de traiter les données HTTP dans l'encoding cible</li>
+                    <li>Ne dispense pas de setter correctement l'encoding sur les vues</li>
+                </ul>
+
+                <aside class="notes">
+                    Exemple dans le projet 10
+                </aside>
+            </section>
+
+        </section>
+
+        <!-- *************************************************************** -->
+        <!-- 4 Spring security -->
+        <!-- *************************************************************** -->
+
+        <section>
+            <section>
+                <h2>Spring security</h2>
+            </section>
+
+            <section>
                 <h3></h3>
 
                 <ul>
@@ -739,6 +888,46 @@ private Toto toto;
                 <aside class="notes">
                 </aside>
             </section>
+
+            <section>
+                <h3></h3>
+
+                <ul>
+                    <li></li>
+                </ul>
+
+                <aside class="notes">
+                </aside>
+            </section>
+        </section>
+
+        <!-- *************************************************************** -->
+        <!-- 5 Exo Spring web -->
+        <!-- *************************************************************** -->
+
+        <!-- TODO faire l'exo 2 ! -->
+
+        <section>
+            <h3>Testons Spring Web !</h3>
+            <ol style="font-size:90%;">
+                <li>Complétons le projet Exo 2 ...
+                    <ul>
+                        <li>Créer les beans des voitures clio / ferrari / lotus</li>
+                        <li>Créer deux parking
+                            <ul>
+                                <li>Concession : avec deux clio, une ferrari, deux lotus</li>
+                                <li>Occasion : avec deux clio, une lotus</li>
+                            </ul>
+                        </li>
+                        <li>Les parking initialisent les niveaux d'essences via initEssence()</li>
+                        <li>Créer le bean garage référençant les deux parking et le commercial</li>
+                        <li>GarageApplication doit tourner !</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <aside class="notes">
+            </aside>
         </section>
 
         <!-- *************************************************************** -->
@@ -811,13 +1000,13 @@ private Toto toto;
         dependencies: [
             {
                 src: 'reveal-3.3.0/lib/js/classList.js', condition: function () {
-                return !document.body.classList;
-            }
+                    return !document.body.classList;
+                }
             },
             {
                 src: 'reveal-3.3.0/plugin/highlight/highlight.js', async: true, callback: function () {
-                hljs.initHighlightingOnLoad();
-            }
+                    hljs.initHighlightingOnLoad();
+                }
             },
             {src: 'reveal-3.3.0/plugin/zoom-js/zoom.js', async: true},
             {src: 'reveal-3.3.0/plugin/notes/notes.js', async: true}
