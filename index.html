@@ -752,6 +752,20 @@ private Toto toto;
                 <ul>
                     <li><!-- TODO - SELECT / TEXTAREA / CHECKBOX --></li>
                     <li>Norme HTML => un checkbox décoché n'est pas envoyé dans le post</li>
+                    <li>Exemple dans le projet spring 8b ..</li>
+                </ul>
+
+                <aside class="notes">
+                </aside>
+            </section>
+
+            <section>
+                <h3>Gestion d'un appel Ajax</h3>
+
+                <ul>
+                    <li><!-- TODO - Ajax Call --></li>
+                    <li>Norme HTML => un checkbox décoché n'est pas envoyé dans le post</li>
+                    <li>Exemple dans le projet spring 8c ..</li>
                 </ul>
 
                 <aside class="notes">
@@ -762,7 +776,8 @@ private Toto toto;
                 <h3>Upload de fichier</h3>
 
                 <ul>
-                   <li><!-- TODO --></li>
+                    <li><!-- TODO upload fichier --></li>
+                    <li>Exemple dans le projet spring 8d ..</li>
                 </ul>
 
                 <aside class="notes">
@@ -879,24 +894,45 @@ private Toto toto;
             </section>
 
             <section>
-                <h3></h3>
+                <h3>Init</h3>
 
                 <ul>
-                    <li></li>
+                    <li>Gestion d'authentification et d'autorisations</li>
+                    <li>Brique à part entière (ne suis pas les versions)</li>
+                    <li>Fichier de configuration à part</li>
+                    <li>Configuration minimale pour une utilisation directe</li>
+                    <li>Exemple dans le projet spring 11...</li>
                 </ul>
 
                 <aside class="notes">
+                    web.xml<br/>
+                    on ajoute le filtre de spring security dans le web.xml<br/>
+                    on crée le fichier de configuration de spring security<br/>
+                    test d'accès :<br/>
+                    localhost:8080/welcome<br/>
+                    localhost:8080/admin<br/>
+                    la login page est par défaut<br/>
+                    spring 4 demande de gérer des tokens crslf<br/>
                 </aside>
             </section>
 
             <section>
-                <h3></h3>
+                <h3>Personnalisation</h3>
 
                 <ul>
-                    <li></li>
+                    <li>Personnalisation de la page de login</li>
+                    <li>Personnalisation des redirection logout</li>
+                    <li>...</li>
+                    <li>Exemple dans le projet spring 12</li>
                 </ul>
 
                 <aside class="notes">
+                    ajout d'une page de login<br/>
+                    déclaration controller login<br/>
+                    ajout page login<br/>
+                    le logout est géré par login?logout automatiquement<br/>
+                    l'erreur de log est géré par login?error automatiquement<br/>
+                    username et password doivent être présent<br/>
                 </aside>
             </section>
         </section>
@@ -931,13 +967,54 @@ private Toto toto;
         </section>
 
         <!-- *************************************************************** -->
+        <!-- 6. Spring batch -->
+        <!-- *************************************************************** -->
+
+        <section>
+            <section>
+                <h2>Spring Batch</h2>
+            </section>
+
+            <section>
+                <h3>Spring Batch</h3>
+
+                <ul>
+                    <li>Gère des opérations récurentes et/ou de gros volumes de données</li>
+                    <li>Brique à part entière (ne suis pas les versions)</li>
+                    <li>Gestion des transactions, des logs</li>
+                    <li>Console d'administration web (start/stop/restart/skip/retry) </li>
+                    <li>Exemple dans le projet spring 13..</li>
+                </ul>
+
+                <aside class="notes">
+                    http://projects.spring.io/spring-batch/
+                    http://www.mkyong.com/tutorials/spring-batch-tutorial/
+                    http://blog.netapsys.fr/spring-batch-par-lexemple-2/
+                </aside>
+            </section>
+        </section>
+
+        <!-- *************************************************************** -->
         <!-- 7. Spring plus loin -->
         <!-- *************************************************************** -->
 
         <section>
-
             <section>
                 <h2>Aller plus loin dans Spring</h2>
+            </section>
+
+            <section>
+                <h3>Spring c'est aussi du ...</h3>
+                <ul>
+                    <li>Cache (ehcache)</li>
+                    <li>JDBC / JPA (Hibernate)</li>
+                    <li>Mail</li>
+                    <li>JMS</li>
+                    <li>REST</li>
+                    <li>AOP</li>
+                    <li>Templating (thymeleaf)</li>
+                    <li>...</li>
+                </ul>
             </section>
 
             <section>

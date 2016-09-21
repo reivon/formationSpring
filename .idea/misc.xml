@@ -7,12 +7,17 @@
     <file type="web" url="file://$PROJECT_DIR$/FormationSpring_10" />
     <file type="web" url="file://$PROJECT_DIR$/FormationSpring_11" />
     <file type="web" url="file://$PROJECT_DIR$/FormationSpring_12" />
+    <file type="web" url="file://$PROJECT_DIR$/FormationSpring_13" />
     <file type="web" url="file://$PROJECT_DIR$/FormationSpring_5" />
     <file type="web" url="file://$PROJECT_DIR$/FormationSpring_6" />
     <file type="web" url="file://$PROJECT_DIR$/FormationSpring_7" />
     <file type="web" url="file://$PROJECT_DIR$/FormationSpring_8" />
+    <file type="web" url="file://$PROJECT_DIR$/FormationSpring_8b" />
+    <file type="web" url="file://$PROJECT_DIR$/FormationSpring_8c" />
+    <file type="web" url="file://$PROJECT_DIR$/FormationSpring_8d" />
     <file type="web" url="file://$PROJECT_DIR$/FormationSpring_9" />
     <file type="web" url="file://$PROJECT_DIR$/FormationSpring_exo1" />
+    <file type="web" url="file://$PROJECT_DIR$/FormationSpring_exo2" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -30,6 +35,11 @@
         <option value="$PROJECT_DIR$/FormationSpring_11/pom.xml" />
         <option value="$PROJECT_DIR$/FormationSpring_12/pom.xml" />
         <option value="$PROJECT_DIR$/FormationSpring_exo1/pom.xml" />
+        <option value="$PROJECT_DIR$/FormationSpring_exo2/pom.xml" />
+        <option value="$PROJECT_DIR$/FormationSpring_8b/pom.xml" />
+        <option value="$PROJECT_DIR$/FormationSpring_8c/pom.xml" />
+        <option value="$PROJECT_DIR$/FormationSpring_8d/pom.xml" />
+        <option value="$PROJECT_DIR$/FormationSpring_13/pom.xml" />
       </list>
     </option>
   </component>

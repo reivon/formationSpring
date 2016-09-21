@@ -22,11 +22,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="FormationSpring_1" />
         <module name="formationSpring_1" />
+        <module name="FormationSpring_1" />
         <module name="FormationSpring_10" />
         <module name="FormationSpring_11" />
         <module name="FormationSpring_12" />
+        <module name="FormationSpring_13" />
         <module name="FormationSpring_2" />
         <module name="FormationSpring_3" />
         <module name="FormationSpring_4" />
@@ -34,8 +35,13 @@
         <module name="FormationSpring_6" />
         <module name="FormationSpring_7" />
         <module name="FormationSpring_8" />
+        <module name="FormationSpring_8b" />
+        <module name="FormationSpring_8c" />
+        <module name="FormationSpring_8d" />
         <module name="FormationSpring_9" />
         <module name="FormationSpring_exo1" />
+        <module name="FormationSpring_exo1 (1)" />
+        <module name="FormationSpring_exo2" />
         <module name="springFormation_1" />
       </profile>
     </annotationProcessing>
@@ -45,6 +51,7 @@
       <module name="FormationSpring_10" target="1.5" />
       <module name="FormationSpring_11" target="1.5" />
       <module name="FormationSpring_12" target="1.5" />
+      <module name="FormationSpring_13" target="1.5" />
       <module name="formationSpring_2" target="1.5" />
       <module name="FormationSpring_2" target="1.5" />
       <module name="FormationSpring_3" target="1.5" />
@@ -53,8 +60,13 @@
       <module name="FormationSpring_6" target="1.5" />
       <module name="FormationSpring_7" target="1.5" />
       <module name="FormationSpring_8" target="1.5" />
+      <module name="FormationSpring_8b" target="1.5" />
+      <module name="FormationSpring_8c" target="1.5" />
+      <module name="FormationSpring_8d" target="1.5" />
       <module name="FormationSpring_9" target="1.5" />
       <module name="FormationSpring_exo1" target="1.5" />
+      <module name="FormationSpring_exo1 (1)" target="1.5" />
+      <module name="FormationSpring_exo2" target="1.5" />
       <module name="springFormation_1" target="1.5" />
     </bytecodeTargetLevel>
   </component>

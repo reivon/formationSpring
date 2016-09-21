@@ -5,32 +5,6 @@ spring framework : http://projects.spring.io/spring-framework/
 getting started : https://docs.spring.io/spring/docs/current/spring-framework-reference/html/overview-getting-started-with-spring.html
 
 
-todo : appel ajax en mvc
-
-
-###  3. spring mvc
-
-
-4. spring security
-
-    4.1 exemple sur le projet formationspring_11 :
-        ajout de dépendance dans le web.xml (attention, version différente de spring core)
-        on ajoute le filtre de spring security dans le web.xml
-        on crée le fichier de configuration de spring security
-        test d'accès :
-            localhost:8080/welcome
-            localhost:8080/admin
-        la login page est par défaut.
-        spring 4 demande de gérer des tokens crslf
-
-    4.2 exemple sur le projet formationspring_12 :
-        ajout d'une page de login
-        déclaration controller login
-        ajout page login
-        le logout est géré par login?logout automatiquement
-        l'erreur de log est géré par login?error automatiquement
-        username et password doivent être présent
-
 
 http://docs.spring.io/spring-security/site/docs/current/guides/html5//
 spring with java config : http://docs.spring.io/spring-security/site/docs/current/guides/html5//helloworld-javaconfig.html
@@ -40,12 +14,6 @@ spring with mvc java config : http://docs.spring.io/spring-security/site/docs/cu
 exemple basé sur spring security basic (form login auto généré) : http://www.mkyong.com/spring-security/spring-security-hello-world-example/
 exemple basé sur custom form login : http://www.mkyong.com/spring-security/spring-security-form-login-example/
 exemple basé sur basic authen : https://www.mkyong.com/spring-security/spring-security-http-basic-authentication-example/
-
-
-5. spring test + junit
-
-
-6. spring batch
 
 
 7. les bonus
@@ -81,16 +49,6 @@ exemple basé sur basic authen : https://www.mkyong.com/spring-security/spring-s
  7.2 spring boot
 
 
- 7.3 topo sur les autres modules
-
-    on peut gérer
-        - du cache (ehcache)
-        - du cron / quartz
-        - du jdbc / jpa
-        - mail
-        - jms
-        - rest
-        - ...
 
 
 
