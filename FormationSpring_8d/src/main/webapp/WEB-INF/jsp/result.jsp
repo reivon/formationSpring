@@ -19,6 +19,10 @@
         <td>ID</td>
         <td>${id}</td>
     </tr>
+    <tr>
+        <td>Photo</td>
+        <td>${photo}</td>
+    </tr>
 </table>
 </body>
 </html>

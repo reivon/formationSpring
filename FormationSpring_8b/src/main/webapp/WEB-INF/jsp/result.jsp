@@ -19,6 +19,22 @@
         <td>ID</td>
         <td>${id}</td>
     </tr>
+    <tr>
+        <td>Sexe</td>
+        <td>${sexe}</td>
+    </tr>
+    <tr>
+        <td>Aime les frites</td>
+        <td>${friteAddict}</td>
+    </tr>
+    <tr>
+        <td>Sauce</td>
+        <td>${sauce}</td>
+    </tr>
+    <tr>
+        <td>Description</td>
+        <td>${description}</td>
+    </tr>
 </table>
 </body>
 </html>

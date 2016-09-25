@@ -6,7 +6,7 @@
 <body>
 
 <h2>Student Information</h2>
-<form:form method="POST" modelAttribute="studentForm" action="/addStudent">
+<form:form method="POST" modelAttribute="studentForm" action="/addStudent" enctype="multipart/form-data">
     <table>
         <tr>
             <td><form:label path="name">Name</form:label></td>
@@ -19,6 +19,10 @@
         <tr>
             <td><form:label path="id">id</form:label></td>
             <td><form:input path="id" /></td>
+        </tr>
+        <tr>
+            <td><form:label path="id">Photo</form:label></td>
+            <td><input type="file" name="photo"></td>
         </tr>
         <tr>
             <td colspan="2">

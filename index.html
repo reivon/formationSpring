@@ -750,12 +750,13 @@ private Toto toto;
                 <h3>Gestion des autres input</h3>
 
                 <ul>
-                    <li><!-- TODO - SELECT / TEXTAREA / CHECKBOX --></li>
+                    <li>Spring gère également les select, textarea, checbox, ...</li>
                     <li>Norme HTML => un checkbox décoché n'est pas envoyé dans le post</li>
                     <li>Exemple dans le projet spring 8b ..</li>
                 </ul>
 
                 <aside class="notes">
+                    Des valeurs par défaut ont été mises en place.
                 </aside>
             </section>
 
@@ -763,12 +764,16 @@ private Toto toto;
                 <h3>Gestion d'un appel Ajax</h3>
 
                 <ul>
-                    <li><!-- TODO - Ajax Call --></li>
-                    <li>Norme HTML => un checkbox décoché n'est pas envoyé dans le post</li>
+                    <li>Mapping Object / data simplifié par Spring</li>
+                    <li>Gestion de l'XML, du JSon, ...</li>
+                    <li>Ajout des dépendances correspondantes</li>
                     <li>Exemple dans le projet spring 8c ..</li>
                 </ul>
 
                 <aside class="notes">
+                    Ajouts dépendances jackson<br />
+                    Appel JQuery Ajax. Mapping automatique.<br />
+                    Attention de bien produire du JSON (on peut renseigner le produce dans le requestmapping)
                 </aside>
             </section>
 
@@ -776,11 +781,15 @@ private Toto toto;
                 <h3>Upload de fichier</h3>
 
                 <ul>
-                    <li><!-- TODO upload fichier --></li>
+                    <li>Spring gère églament l'upload des fichiers</li>
+                    <li>Quelques dépendances supplémentaires sont nécessaires</li>
                     <li>Exemple dans le projet spring 8d ..</li>
                 </ul>
 
                 <aside class="notes">
+                    Ajout dépendances commons-fileupload & commons-io<br />
+                    AJout  enctype="multipart/form-data" dans le formulaire<br/>
+                    Remarque, ce n'est pas un champ form:file<br />
                 </aside>
             </section>
 

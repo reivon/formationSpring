@@ -1,4 +1,4 @@
-package fr.reivon.formation.spring8;
+package fr.reivon.formation.spring8d;
 
 public class Student {
     private String age;
