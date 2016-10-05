@@ -1,4 +1,4 @@
-package fr.reivon.formation.spring.exo2;
+package fr.reivon.formation.spring.exo2.model;
 
 import java.util.List;
 import java.util.Random;

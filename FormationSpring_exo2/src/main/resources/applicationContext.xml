@@ -14,7 +14,7 @@
     <!-- Déclaration des beans -->
 
     <!-- Garage -->
-    <bean id="garage" class="fr.reivon.formation.spring.exo2.Garage">
+    <bean id="garage" class="fr.reivon.formation.spring.exo2.model.Garage">
         <property name="commercial" ref="commercial"/>
         <property name="parkings">
             <list>
@@ -25,7 +25,7 @@
     </bean>
 
     <!-- Commercial -->
-    <bean id="commercial" class="fr.reivon.formation.spring.exo2.Commercial"
+    <bean id="commercial" class="fr.reivon.formation.spring.exo2.model.Commercial"
           p:nom="Toto"
           p:age="#{ (new java.util.Random()).nextInt(11) + 1 }"/>
 
@@ -33,14 +33,14 @@
     <!-- p:age="#{ T(java.lang.Math).random() * 10 }" -->
 
     <!-- Voiture -->
-    <bean id="voiture" class="fr.reivon.formation.spring.exo2.Voiture" abstract="true"/>
+    <bean id="voiture" class="fr.reivon.formation.spring.exo2.model.Voiture" abstract="true"/>
 
     <bean id="clio" parent="voiture" scope="prototype" p:nom="clio"/>
     <bean id="ferrari" parent="voiture" scope="prototype" p:nom="ferrari"/>
     <bean id="lotus" parent="voiture" scope="prototype" p:nom="lotus"/>
 
     <!-- parking concession -->
-    <bean id="concession" class="fr.reivon.formation.spring.exo2.Parking" init-method="initEssence">
+    <bean id="concession" class="fr.reivon.formation.spring.exo2.model.Parking" init-method="initEssence">
         <property name="nom" value="Concession"/>
         <property name="voitures">
             <list>
@@ -54,7 +54,7 @@
     </bean>
 
     <!-- parking occasion -->
-    <bean id="occasion" class="fr.reivon.formation.spring.exo2.Parking" init-method="initEssence">
+    <bean id="occasion" class="fr.reivon.formation.spring.exo2.model.Parking" init-method="initEssence">
         <property name="nom" value="Occasion"/>
         <property name="voitures">
             <list>

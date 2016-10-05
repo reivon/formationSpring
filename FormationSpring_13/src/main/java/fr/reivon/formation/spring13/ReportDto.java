@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 @XmlRootElement(name = "record")
-public class Report {
+public class ReportDto {
 
     private int id;
     private BigDecimal sales;
@@ -61,7 +61,7 @@ public class Report {
 
     @Override
     public String toString() {
-        return "Report [id=" + id + ", sales=" + sales
+        return "ReportDto [id=" + id + ", sales=" + sales
                 + ", qty=" + qty + ", staffName=" + staffName + "]";
     }
 
