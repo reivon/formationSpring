@@ -12,35 +12,46 @@
 
 <h2>Mon garage</h2>
 
+
 <!-- Traitement du commercial -->
 
 <div>
     <!-- 2. Afficher le nom du commercial dans le message -->
+    <spring:message code="index.commercial" arguments="${garage.commercial.nom}"/>
 </div>
 
 <!-- Traitement des parkings -->
 
 <!-- 3. Afficher les parkings avec leur nom -->
-<c:forEach items="" var="">
+<c:forEach items="${garage.parkings}" var="parking">
     <div style="float:left; width:50%;">
 
         <div>
             <!-- 3. parking : write my name -->
-            <h3></h3>
-            <!-- 4. Afficher toutes les voitures du parking courant (nom + essence) -->
+            <h3>${parking.nom}</h3>
+            <!-- 4. Afficher toutes les voitures du parking courant -->
             <ul>
-                <li>Empty</li>
+                <c:forEach items="${parking.voitures}" var="voiture">
+                    <li>${voiture.nom} [${voiture.essence}]</li>
+                </c:forEach>
             </ul>
         </div>
 
         <div>
             <!-- 5. bouton ajouter essence pour toutes les voitures du parking -->
-            <input name="addEssenceButton" type="button" data-pNom="" value="message ajouter essence"/>
+            <input name="addEssenceButton" type="button" data-pNom="${parking.nom}"
+                   value="<spring:message code="index.parking.ajouterEssence"/>"/>
         </div>
 
         <div>
-            <!-- 6. 7. Créer un formulaire pour ajouter une voiture sur l'adresse /parking/addVoiture -->
-            <!-- champ parkingName et voitureName -->
+            <!-- 6. 7. Créer un formulaire pour ajouter une voiture -->
+            <form:form method="POST" modelAttribute="addVoitureForm" action="/parking/addVoiture">
+                <form:hidden path="parkingName" value="${parking.nom}"/>
+                <form:select path="voitureName">
+                    <form:options items="${listVoitures}"/>
+                </form:select>
+                <input type="submit" value="<spring:message code="index.parking.ajouterVoiture"/>"/>
+            </form:form>
         </div>
     </div>
 </c:forEach>

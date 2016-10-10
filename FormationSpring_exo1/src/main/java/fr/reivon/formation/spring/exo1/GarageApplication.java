@@ -1,6 +1,5 @@
-package fr.reivon.formation.spring.exo2;
+package fr.reivon.formation.spring.exo1;
 
-import fr.reivon.formation.spring.exo2.model.Garage;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

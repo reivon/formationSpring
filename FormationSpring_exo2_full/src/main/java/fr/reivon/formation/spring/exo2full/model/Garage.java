@@ -1,4 +1,4 @@
-package fr.reivon.formation.spring.exo2.model;
+package fr.reivon.formation.spring.exo2full.model;
 
 import java.util.List;
 

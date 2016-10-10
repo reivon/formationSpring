@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="FormationSpring_exo1 (1):war exploded">
+  <artifact type="exploded-war" name="FormationSpring_exo2:war exploded">
     <output-path>$PROJECT_DIR$/FormationSpring_exo2/target/FormationSpring_exo2</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
