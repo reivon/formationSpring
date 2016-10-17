@@ -37,8 +37,8 @@
         <!-- *************************************************************** -->
 
         <section>
-            <h1>Comprendre Spring</h1>
-            <h3>Formation au Framework multi fonction</h3>
+            <h1>Spring</h1>
+            <h3>Formation au Framework couteau suisse</h3>
             <p>
                 <small>Créé par Tony MEMBOT via l'API de présentation <a href="https://github.com/hakimel/reveal.js">Reveal.js</a>
                 </small>
@@ -52,21 +52,14 @@
         </section>
 
         <section>
-            <h2>Comprendre Spring</h2>
+            <h2>Spring</h2>
             <ul>
                 <li>C'est quoi spring ?</li>
                 <li>Spring Core</li>
                 <li>Spring MVC</li>
                 <li>Spring Security</li>
                 <li>Spring Batch</li>
-                <li>Spring et ...
-                    <ul>
-                        <li>les tests unitaires</li>
-                        <li>AOP</li>
-                        <li>Spring boot</li>
-                        <li>...</li>
-                    </ul>
-                </li>
+                <li>Aller plus loin avec Spring</li>
             </ul>
 
             <aside class="notes">
@@ -103,10 +96,12 @@
                 </ul>
 
                 <aside class="notes">
+                    Conteneur léger : brique de base pour instancier des objets et les mettre en relation.<br/>
+                    Pour faire plus, on rajoute des briques.</br />
+                    Tomcat = conteneur léger, jboss conteneur lourd<br />
                     Inversion de contrôle = Injection de dépendance. (exemple par la suite)<br/>
                     Définir programmation orienté aspect => transversale.<br/>
                     Couche d'abstraction : Hibernate / quartz / velocity / jdbc / ...<br/>
-                    <br/>
                     Entre chaque version il y a eu de nombreuses et importantes évolution.<br/>
                 </aside>
             </section>
@@ -117,14 +112,18 @@
 
             <section>
                 <h2>Attention aux versions !</h2>
-                <h3>Une version majeure = grand ménage de printemps</h3>
-                <ul>La formation se base sur les version suivantes :
-                    <li>Spring Framework : 4.3.2.RELEASE</li>
-                    <li>Spring Security : 4.1.3.RELEASE</li>
+                <h4>Une version majeure = grand ménage de printemps</h4>
+                <ul><li>La formation se base sur les versions suivantes :
+                        <ul>
+                            <li>Spring Framework : 4.3.2.RELEASE</li>
+                            <li>Spring Security : 4.1.3.RELEASE</li>
+                            <li>Spring Batch : 3.0.7.RELEASE</li>
+                        </ul>
+                    </li>
                 </ul>
 
                 <aside class="notes">
-                    Certains parlent de massacre à la tronçonneuse mais évoluer est nécessaire.
+                    évoluer est nécessaire. C'est une force de spring
                 </aside>
             </section>
 
@@ -141,7 +140,7 @@
             </section>
 
             <section>
-                <h3>C'est quoi l'Inversion of Control</h3>
+                <h3>IoC : Inversion of Control</h3>
                 <br/>
                 <ul>
                     <li>Aujourd'hui renommé injection de dépendance</li>
@@ -178,12 +177,12 @@ public class Parking {
 
             <section>
                 <h3>Exemple XML</h3>
-                <br/>
                 <ul>
                     <li>Dépendances maven sur spring-context</li>
                     <li>Un fichier xml de configuration principal</li>
                     <li>Déclaration de bean et d'injection de dépendance via l'xml</li>
-                    <li>Chargement du context spring dans le main</li>
+                    <li>Chargement du context spring pour utilisation</li>
+                    <li>Explorons le projet Spring 1 ...</li>
                 </ul>
 
                 <aside class="notes">
@@ -191,6 +190,7 @@ public class Parking {
                     Dépendance de context : https://mvnrepository.com/artifact/org.springframework/spring-context/4.3.2.RELEASE
                     app / beans / core / expression.<br/>
                     Il est possible de découper le fichier XML en réalisant des imports (Mais un seul point d'entrée).
+                    <pre><code><import resource="classpath:config/spring/that-other-xml-conf.xml"/></code></pre>
                 </aside>
             </section>
 
@@ -202,18 +202,19 @@ public class Parking {
                     <li>Une classe de configuration principale</li>
                     <li>Déclaration des beans et injection de dépendance via les annotations</li>
                     <li>Chargement du context spring dans le main légèrement différent</li>
+                    <li>Explorons le projet Spring 2 ...</li>
                 </ul>
 
                 <aside class="notes">
                     Projet exemple : <b>springFormation_2</b>.<br/>
                     On peut retrouver l'annotation @Bean aussi<br/>
                     Ainsi, si dans messageServiceImpl on supprime le @Component, on peut déclarer dans la classe Application:<br/>
-                    <pre>
+                    <pre><code>
                     @Bean
                     public MessageServiceImpl messageService(){
                         return new MessageServiceImpl();
                     }
-                    </pre>
+                    </code></pre>
                     Il est à noter que l'on peut avoir plusieurs @Configuration si on souhaite découper notre application.<br/>
                     On peut réaliser des héritages / dépendances avec @Import(nomClass.class)<br/>
                 </aside>
@@ -248,10 +249,10 @@ public class Parking {
             <section>
                 <h3>@Component</h3>
                 <ul>
-                    <li>Sur la classe VoitureDeCourse va créé un bean nommé "voitureDeCourse"</li>
+                    <li>Sur la classe VoitureDeCourse va créer un bean nommé "voitureDeCourse"</li>
                     <li>On peut préciser ce nom <code data-trim>@Component(value = "voiture2course")</code></li>
                     <li>@Service, @Controller, @Repository sont des spécialisations</li>
-                    <li>On laisse spring géré l'instanciation</li>
+                    <li>On laisse spring gérer l'instanciation</li>
                 </ul>
 
                 <aside class="notes">
@@ -263,7 +264,7 @@ public class Parking {
                 <h3>@Bean</h3>
                 <ul>
                     <li>Disponible uniquement si on utilise @Configuration</li>
-                    <li>Sur la méthode myVoitureDeCourse va créé un bean nommé "myVoitureDeCourse"</li>
+                    <li>Sur la méthode myVoitureDeCourse va créer un bean nommé "myVoitureDeCourse"</li>
                     <li>On peut préciser ce nom <code data-trim>@Bean(name={"voiture2course"})</code></li>
                     <li>C'est le développeur qui gère l'instanciation</li>
                 </ul>
@@ -310,7 +311,7 @@ public SomeService someService() {
         <section>
 
             <section>
-                <h3>Spring MVC</h3>
+                <h3>Les injections de dépendances</h3>
 
                 <aside class="notes">
                 </aside>
@@ -321,16 +322,17 @@ public SomeService someService() {
 
                 <ul>
                     <li>Injection par <b>type</b></li>
-                    <li>Et si on a deux implémentation de la même interface ? => Démonstration</li>
+                    <li>Et si on a deux implémentations de la même interface ? => Démonstration</li>
                     <li>Avec <code data-trim>@Qualifier("name")</code> : Injection par <b>nom</b></li>
                     <li>Peut préciser qu'il n'est pas obligatoire <code>@Autowired(required = false)</code></li>
-                    <li>Annotations spring</li>
+                    <li>Annotation Spring</li>
                 </ul>
 
                 <aside class="notes">
                     Démonstration : <br />
                     1. Créer une classe MessageServiceAutreImpl qui implémente MessageService<br />
                     2. Lancer l'appli. => plante.<br />
+                    pas obligatoire = ne plante pas.<br />
                 </aside>
             </section>
 
@@ -340,14 +342,11 @@ public SomeService someService() {
                 <ul>
                     <li>Injection par <b>type</b></li>
                     <li>Même soucis sur la double implémentation que @Component</li>
-                    <li>Avec <pre><code data-trim>@Resource(name = "name")</code></pre> : Injection par <b>nom</b></li>
+                    <li>Pour injecter par nom : <pre><code data-trim>@Resource(name = "name")</code></pre></li>
                     <li>Annotation Java</li>
                 </ul>
 
                 <aside class="notes">
-                    Démonstration : <br />
-                    1. Créer une classe MessageServiceAutreImpl qui implémente MessageService<br />
-                    2. Lancer l'appli. => plante.<br />
                 </aside>
             </section>
 
@@ -382,7 +381,7 @@ private Toto toto;
                 <ul>
                     <li class="fragment">Modifions un peu le projet Spring2 ...</li>
                     <li class="fragment">Par défaut tout est singleton !</li>
-                    <li class="fragment">
+                    <li class="fragment">scopes :
                         <ul>
                             <li>Singleton</li>
                             <li>Prototype</li>
@@ -394,38 +393,38 @@ private Toto toto;
                 </ul>
 
                 <aside class="notes">
-                    Faire un test sur formationSpring_2 en ajoutant un 2ème service dans MessagePrinter.
-                    Puis ajouter dans l'appel d'affichage
-                    System.out.println(service2.getMessage());
-                    service2.setMessage("message modifié");
-                    System.out.println(service.getMessage());
-                    System.out.println(service2.getMessage());
-
-                    * = que dans spring web.
-                    Ajouter => @Scope("prototype")
+                    Faire un test sur formationSpring_2 en ajoutant un 2ème service dans MessagePrinter.<br/>
+                    Puis ajouter dans l'appel d'affichage<br/>
+                    System.out.println(service2.getMessage());<br/>
+                    service2.setMessage("message modifié");<br/>
+                    System.out.println(service.getMessage());<br/>
+                    System.out.println(service2.getMessage());<br/>
+                    <br/>
+                    * = que dans spring web.<br/>
+                    Ajouter => @Scope("prototype")<br/>
                 </aside>
             </section>
 
             <section>
                 <h4>Injection de collections</h4>
-                <ul class="fragment">
-                    <li>list</li>
-                    <li>set</li>
-                    <li>map</li>
-                    <li>props</li>
-                </ul>
                 <ul>
-                    <li class="fragment"></li>
+                    <li>Types disponibles :<ul>
+                        <li>list</li>
+                        <li>set</li>
+                        <li>map</li>
+                        <li>props</li>
+                    </ul></li>
                     <li class="fragment">Tout est string dans un fichier xml ...</li>
                     <li class="fragment">... mais il existe des converter automatique</li>
+                    <li class="fragment">Explorons les projet 3</li>
                     <li class="fragment">Et l'injection d'une valeur null ?</li>
-                    <li class="fragment"><pre><code data-trim><value><null/></value></code></pre></li>
+                    <li class="fragment"><pre><code data-trim><value><null /></value></code></pre></li>
                 </ul>
 
                 <aside class="notes">
-                    Exemple avec le projet spring 3.
-                    L'utilité de tout ça ? notamment pour injecter des listes de beans / référence.
-                    Injecter null ? "" représentant une chaîne vide ?
+                    Exemple avec le projet spring 3.<br/>
+                    L'utilité de tout ça ? notamment pour injecter des listes de beans / référence.<br/>
+                    Injecter null ? "" représentant une chaîne vide ?<br/>
                 </aside>
             </section>
         </section>

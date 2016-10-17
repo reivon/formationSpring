@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="FormationSpring_exo2_full:war exploded">
-    <output-path>$PROJECT_DIR$/FormationSpring_exo2_full/target/FormationSpring_exo2_full</output-path>
+    <output-path>$PROJECT_DIR$/out/artifacts/FormationSpring_exo2_full_war_exploded</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -19,12 +19,8 @@
           <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:4.1.3.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:4.1.3.RELEASE" />
-          <element id="library" level="project" name="Maven: javax.servlet:servlet-api:2.5" />
           <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
         </element>
-      </element>
-      <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/FormationSpring_exo2_full/target/FormationSpring_exo2_full/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="FormationSpring_exo2_full/web/Web" />
     </root>
