@@ -90,7 +90,7 @@
                             <li class="fragment">Couche d'abstraction (pour d'autres API)</li>
                         </ul>
                     </li>
-                    <li class="fragment"><b>2003</b> : première version.</li>
+                    <li class="fragment"><b>2003</b> : première version</li>
                     <li class="fragment"><b>2016</b> : 4.2.3</li>
                     <li class="fragment"><b>Libre</b></li>
                 </ul>
@@ -249,7 +249,7 @@ public class Parking {
             <section>
                 <h3>@Component</h3>
                 <ul>
-                    <li>Sur la classe VoitureDeCourse va créer un bean nommé "voitureDeCourse"</li>
+                    <li>Sur la classe VoitureDeCourse, va créer un bean nommé "voitureDeCourse"</li>
                     <li>On peut préciser ce nom <code data-trim>@Component(value = "voiture2course")</code></li>
                     <li>@Service, @Controller, @Repository sont des spécialisations</li>
                     <li>On laisse spring gérer l'instanciation</li>
@@ -264,7 +264,7 @@ public class Parking {
                 <h3>@Bean</h3>
                 <ul>
                     <li>Disponible uniquement si on utilise @Configuration</li>
-                    <li>Sur la méthode myVoitureDeCourse va créer un bean nommé "myVoitureDeCourse"</li>
+                    <li>Sur la méthode myVoitureDeCourse, va créer un bean nommé "myVoitureDeCourse"</li>
                     <li>On peut préciser ce nom <code data-trim>@Bean(name={"voiture2course"})</code></li>
                     <li>C'est le développeur qui gère l'instanciation</li>
                 </ul>
@@ -298,7 +298,7 @@ public SomeService someService() {
                 <aside class="notes">
                     Ce cas peut être utile pour du mock par exemple, ou pour instancier des classes différentes selon un
                     environnement ...<br/>
-                    La différence entre les deux est ténu. On préfera garder @Component généralement.
+                    La différence entre les deux est ténue. On préfera garder @Component généralement.
                 </aside>
             </section>
 
@@ -323,7 +323,7 @@ public SomeService someService() {
                 <ul>
                     <li>Injection par <b>type</b></li>
                     <li>Et si on a deux implémentations de la même interface ? => Démonstration</li>
-                    <li>Avec <code data-trim>@Qualifier("name")</code> : Injection par <b>nom</b></li>
+                    <li>Avec <code data-trim>@Qualifier("name")</code> : injection par <b>nom</b></li>
                     <li>Peut préciser qu'il n'est pas obligatoire <code>@Autowired(required = false)</code></li>
                     <li>Annotation Spring</li>
                 </ul>
@@ -341,7 +341,7 @@ public SomeService someService() {
 
                 <ul>
                     <li>Injection par <b>type</b></li>
-                    <li>Même soucis sur la double implémentation que @Component</li>
+                    <li>Même souci sur la double implémentation que @Component</li>
                     <li>Pour injecter par nom : <pre><code data-trim>@Resource(name = "name")</code></pre></li>
                     <li>Annotation Java</li>
                 </ul>
@@ -370,7 +370,7 @@ private Toto toto;
                 <h4>@Resource ou @Autowired ?</h4>
                 <p>Sur des injections de propriétés, il est préférable d'utiliser @Resource qui est un standard Java et qui est fait pour ça.</p>
                 <h4>Setter ou constructeur ?</h4>
-                <p>On peut mixer les deux. La logique veut qu'on mette en setter les dépendances facultatives et en constructeurs les obligatoires.</p>
+                <p>On peut mixer les deux. La logique veut qu'on mette en setter les dépendances facultatives et en constructeur les obligatoires.</p>
 
                 <aside class="notes">
                 </aside>
@@ -380,8 +380,8 @@ private Toto toto;
                 <h4>Le scope d'injection</h4>
                 <ul>
                     <li class="fragment">Modifions un peu le projet Spring2 ...</li>
-                    <li class="fragment">Par défaut tout est singleton !</li>
-                    <li class="fragment">scopes :
+                    <li class="fragment">Par défaut, tout est singleton !</li>
+                    <li class="fragment">Scopes :
                         <ul>
                             <li>Singleton</li>
                             <li>Prototype</li>
@@ -415,8 +415,8 @@ private Toto toto;
                         <li>props</li>
                     </ul></li>
                     <li class="fragment">Tout est string dans un fichier xml ...</li>
-                    <li class="fragment">... mais il existe des converter automatique</li>
-                    <li class="fragment">Explorons les projet 3</li>
+                    <li class="fragment">... mais il existe des converters automatiques</li>
+                    <li class="fragment">Explorons le projet 3</li>
                     <li class="fragment">Et l'injection d'une valeur null ?</li>
                     <li class="fragment"><pre><code data-trim><value><null /></value></code></pre></li>
                 </ul>
@@ -472,17 +472,17 @@ private Toto toto;
             <h3>Testons !</h3>
             <ol style="font-size:90%;">
                 <li>Instancier via un new (projet 1)</li>
-                <li>Complétons le projet Exo 1 ...
+                <li>Compléter le projet Exo 1 ...
                     <ul>
                         <li>Créer les beans des voitures clio / ferrari / lotus</li>
-                        <li>Créer deux parking
+                        <li>Créer deux parkings
                             <ul>
                                 <li>Concession : avec deux clio, une ferrari, deux lotus</li>
                                 <li>Occasion : avec deux clio, une lotus</li>
                             </ul>
                         </li>
-                        <li>Les parking initialisent les niveaux d'essences via initEssence()</li>
-                        <li>Créer le bean garage référençant les deux parking et le commercial</li>
+                        <li>Les parking initialisent les niveaux d'essence via initEssence()</li>
+                        <li>Créer le bean garage référençant les deux parkings et le commercial</li>
                         <li>GarageApplication doit tourner !</li>
                     </ul>
                 </li>
@@ -504,7 +504,7 @@ private Toto toto;
                 <h3>Spring properties</h3>
 
                 <ul>
-                    <li>Externaliser les données "changeantes" / technique</li>
+                    <li>Externaliser les données "changeantes" / techniques</li>
                     <li>Chargement de properties dans le context spring</li>
                     <li>Récupération des valeurs directement dans l'initialisation d'un bean ou via un @value</li>
                     <li>Possibilité de mettre en place un système de surcharge</li>
@@ -656,7 +656,7 @@ private Toto toto;
                 <ul>
                     <li>Si tout est résolu par le resolver .. tout est jsp ?</li>
                     <li class="fragment">Et les js, css ?</li>
-                    <li class="fragment">Spring peut définir un context de ressource static</li>
+                    <li class="fragment">Spring peut définir un context de ressources statiques</li>
                     <li class="fragment">Exemple dans le projet spring 6 ..</li>
                 </ul>
 
@@ -679,8 +679,8 @@ private Toto toto;
                 <h3>Redirect & Forward</h3>
 
                 <ul>
-                    <li>Toujours utile pour le pattern POST/Redirect/GET pour gérer les submit multiple</li>
-                    <li>Redirect = retour vers le navigateur avec une réponse http 302 (redirection) vers la nouvelle url. => on perd la request</li>
+                    <li>Toujours utile pour le pattern POST/Redirect/GET pour gérer les submit multiples</li>
+                    <li>Redirect = retour vers le navigateur avec une réponse http 302 (redirection) vers la nouvelle url => on perd la request</li>
                     <li>Forward = redirection interne au serveur, transparente pour le navigateur et l'utilisateur => on conserve la request</li>
                     <li>
                         Depuis la 3.1, Spring intègre les RedirectAttributes ...<br/>
@@ -763,7 +763,7 @@ private Toto toto;
                 <h3>Gestion d'un appel Ajax</h3>
 
                 <ul>
-                    <li>Mapping Object / data simplifié par Spring</li>
+                    <li>Mapping object / data simplifié par Spring</li>
                     <li>Gestion de l'XML, du JSon, ...</li>
                     <li>Ajout des dépendances correspondantes</li>
                     <li>Exemple dans le projet spring 8c ..</li>
@@ -905,7 +905,7 @@ private Toto toto;
                 <h3>Init</h3>
 
                 <ul>
-                    <li>Gestion d'authentification et d'autorisations</li>
+                    <li>Gestion d'authentifications et d'autorisations</li>
                     <li>Brique à part entière (ne suis pas les versions)</li>
                     <li>Fichier de configuration à part</li>
                     <li>Configuration minimale pour une utilisation directe</li>
@@ -954,7 +954,7 @@ private Toto toto;
         <section>
             <h3>Testons Spring Web !</h3>
             <ol style="font-size:90%;">
-                <li>Complétons le projet Exo 2 ...
+                <li>Compléter le projet Exo 2 ...
                     <ol>
                         <li>GarageController doit mapper / pour renvoyer la page index.jsp</li>
                         <li>Afficher le nom du commercial dans le message d'accueil</li>
@@ -962,7 +962,7 @@ private Toto toto;
                         <li>Afficher les voitures dans chaque parking</li>
                         <li>Mettre en place un bouton permettant d'ajouter de l'essence pour tout le parking</li>
                         <li>Mettre en place un formulaire au niveau parking pour ajouter une voiture via un input</li>
-                        <li>Modifier ce formulaire pour prendre une liste de nom de voiture à la place de l'input</li>
+                        <li>Modifier ce formulaire pour prendre une liste de nom de voitures à la place de l'input</li>
                     </ol>
                 </li>
             </ol>
