@@ -7,8 +7,8 @@
 	http://www.springframework.org/schema/security/spring-security-4.1.xsd">
 
     <http>
-        <intercept-url pattern="/admin" access="hasRole('ROLE_USER')"/>
-        <form-login/>
+        <intercept-url pattern="/admin" access="hasRole('ROLE_ADMIN')"/>
+        <form-login />
         <logout invalidate-session="true" logout-success-url="/"/>
     </http>
 
