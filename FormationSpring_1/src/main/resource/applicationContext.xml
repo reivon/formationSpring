@@ -12,7 +12,7 @@
     <context:component-scan base-package="fr.reivon.formation.spring1"/>
 
     <!-- Déclaration des beans -->
-    <bean id="messageService" class="fr.reivon.formation.spring1.MessageServiceImpl" p:message="Hello le monde !"/>
+    <bean id="messageService" class="fr.reivon.formation.spring1.MessageServiceImpl" p:message="Hello le monde. Bienvenue à cette formation !"/>
     <bean id="messagePrinter" class="fr.reivon.formation.spring1.MessagePrinter">
         <property name="service" ref="messageService" />
     </bean>

@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="EntryPointsManager">
-    <entry_points version="2.0" />
-  </component>
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/FormationSpring_10" />
     <file type="web" url="file://$PROJECT_DIR$/FormationSpring_11" />
@@ -21,17 +18,30 @@
     <file type="web" url="file://$PROJECT_DIR$/FormationSpring_exo2_full" />
     <type id="Spring" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/FormationSpring_14/pom.xml" />
+        <option value="$PROJECT_DIR$/FormationSpring_15/pom.xml" />
+        <option value="$PROJECT_DIR$/FormationSpring_16/pom.xml" />
+        <option value="$PROJECT_DIR$/FormationSpring_17/pom.xml" />
+        <option value="$PROJECT_DIR$/FormationSpring_18/pom.xml" />
+        <option value="$PROJECT_DIR$/FormationSpring_5/pom.xml" />
+        <option value="$PROJECT_DIR$/FormationSpring_6/pom.xml" />
+        <option value="$PROJECT_DIR$/FormationSpring_7/pom.xml" />
+        <option value="$PROJECT_DIR$/FormationSpring_8/pom.xml" />
+        <option value="$PROJECT_DIR$/FormationSpring_8b/pom.xml" />
+        <option value="$PROJECT_DIR$/FormationSpring_8c/pom.xml" />
+        <option value="$PROJECT_DIR$/FormationSpring_8d/pom.xml" />
+        <option value="$PROJECT_DIR$/FormationSpring_9/pom.xml" />
+        <option value="$PROJECT_DIR$/FormationSpring_10/pom.xml" />
+        <option value="$PROJECT_DIR$/FormationSpring_11/pom.xml" />
+        <option value="$PROJECT_DIR$/FormationSpring_12/pom.xml" />
+        <option value="$PROJECT_DIR$/FormationSpring_13/pom.xml" />
+      </list>
+    </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

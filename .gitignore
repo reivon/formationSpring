@@ -14,3 +14,22 @@
 hs_err_pid*
 
 **/target/
+
+#mvnw
+**/.mvn/
+
+############ FROM Spring boot
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+
+#mvnw
+.mvn/

@@ -1,0 +1,20 @@
+server:
+  port: 8082
+  undertow:
+    ioThreads: 15
+    workerThreads: 150
+    accesslog:
+      enabled: true
+  compression:
+    enabled: true
+    mimeTypes: text/xml, text/css, text/html, application/json
+    minResponseSize: 4096
+info:
+  app:
+    name: Mon application Spring Undertow
+    description: C'est ma première application Spring boot sous undertow
+    version: 0.0.1
+# Par défaut, seul les accès authentifié accède au health enrichi (et autres metrics)
+management:
+  security:
+    enabled: false

@@ -38,7 +38,7 @@
 
         <section>
             <h1>Spring</h1>
-            <h3>Formation au Framework couteau suisse</h3>
+            <h3>Maitriser les bases</h3>
             <p>
                 <small>Créé par Tony MEMBOT via l'API de présentation <a href="https://github.com/hakimel/reveal.js">Reveal.js</a>
                 </small>
@@ -231,7 +231,7 @@ public class Parking {
                             <li>XML pour tout ce qui est plus <b>dynamique</b></li>
                         </ul>
                     </li>
-                    <li>Mais attention, la communauté tend vers le full annotation</li>
+                    <li>Mais attention, la communauté tend vers le full annotation, notamment avec Spring boot.</li>
                 </ul>
 
                 <aside class="notes">
@@ -245,6 +245,13 @@ public class Parking {
         <!-- *************************************************************** -->
 
         <section>
+
+            <section>
+                <h3>Déclaration d'un bean</h3>
+
+                <aside class="notes">
+                </aside>
+            </section>
 
             <section>
                 <h3>@Component</h3>
@@ -318,17 +325,32 @@ public SomeService someService() {
             </section>
 
             <section>
+                <h3>Ou injecter ?</h3>
+                <ul>
+                    <li>Via le fichier xml, dans la déclaration du bean</li>
+                    <li>Par annotation, il est possible d'injecter au niveau
+                    <ul>
+                        <li>De la propriété</li>
+                        <li>Du constructeur</li>
+                        <li>Du setter</li>
+                    </ul></li>
+                </ul>
+            </section>
+
+            <section>
                 <h3>@Autowired</h3>
 
                 <ul>
-                    <li>Injection par <b>type</b></li>
+                    <li>Injection par <b>Type</b> &gt; <b>Qualifier</b> &gt; <b>Name</b></li>
                     <li>Et si on a deux implémentations de la même interface ? => Démonstration</li>
-                    <li>Avec <code data-trim>@Qualifier("name")</code> : injection par <b>nom</b></li>
-                    <li>Peut préciser qu'il n'est pas obligatoire <code>@Autowired(required = false)</code></li>
+                    <li>Par qualifier : <pre><code data-trim>@Qualifier("name")</code></pre></li>
+                    <li>Injection par nom via le nom de l'attribut</li>
+                    <li>Peut préciser qu'il n'est pas obligatoire <pre><code data-trim>@Autowired(required = false)</code></pre></li>
                     <li>Annotation Spring</li>
                 </ul>
 
                 <aside class="notes">
+                    <p>Attention, @Qualifier est une annotation java</p>
                     Démonstration : <br />
                     1. Créer une classe MessageServiceAutreImpl qui implémente MessageService<br />
                     2. Lancer l'appli. => plante.<br />
@@ -337,12 +359,13 @@ public SomeService someService() {
             </section>
 
             <section>
-                <h4>@Resource</h4>
+                <h3>@Resource</h3>
 
                 <ul>
-                    <li>Injection par <b>type</b></li>
-                    <li>Même souci sur la double implémentation que @Component</li>
+                    <li>Injection par <b>Name</b> &gt; <b>Type</b> &gt; <b>Qualifier</b></li>
                     <li>Pour injecter par nom : <pre><code data-trim>@Resource(name = "name")</code></pre></li>
+                    <li>On peut lui joindre un <pre><code data-trim>@Qualifier("name")</code></pre></li>
+                    <li>Même souci sur la double implémentation que @Autowired</li>
                     <li>Annotation Java</li>
                 </ul>
 
@@ -351,28 +374,45 @@ public SomeService someService() {
             </section>
 
             <section>
-                <pre><code data-trim>
-@Resource(name = "toto")
-private Toto toto;
-                </code></pre>
-                <p>==</p>
-                <pre><code data-trim>
-@Autowired
-@Qualifier("toto")
-private Toto toto;
-                </code></pre>
+                <h3>@Inject</h3>
+
+                <ul>
+                    <li>Fournit depuis JEE 6 par la spécification CDI.</li>
+                    <li>Utilisé avec l'implémentation Spring, c'est l'équivalent de @autowired..</li>
+                    <li>Injection par <b>Type</b> &gt; <b>Qualifier</b> &gt; <b>Name</b></li>
+                    <li>.. sauf pour la propriété required</li>
+                    <li>Peut se compléter avec @Qualifier pour la recherche par qualifier</li>
+                    <li>Peut se compléter avec @Named pour la recherche par nom</li>
+                    <li><a href="http://rmannibucau.developpez.com/tutoriels/cdi/introduction-cdi/" target="_blank">Introduction à CDI</a></li>
+                </ul>
 
                 <aside class="notes">
+                    <li>Context and Dependency Injection</li>
+                    <li>Google ou </li>
+                    <li>Ne pas oublier d'inclure la dépendance maven
+                        <dependency>
+                            <groupId>javax.inject</groupId>
+                            <artifactId>javax.inject</artifactId>
+                            <version>1</version>
+                        </dependency>
+                    </li>
                 </aside>
             </section>
 
             <section>
-                <h4>@Resource ou @Autowired ?</h4>
-                <p>Sur des injections de propriétés, il est préférable d'utiliser @Resource qui est un standard Java et qui est fait pour ça.</p>
+                <h4>@Resource ou @Autowired ou @Inject ?</h4>
+                <p>Bin ça dépend en fait ..</p>
+                <p><a href="http://www.baeldung.com/spring-annotations-resource-inject-autowire" target="_blank">Référence 1</a></p>
+                <p><a href="https://blogs.sourceallies.com/2011/08/spring-injection-with-resource-and-autowired/#more-2350" target="_blank">Référence 2</a></p>
                 <h4>Setter ou constructeur ?</h4>
                 <p>On peut mixer les deux. La logique veut qu'on mette en setter les dépendances facultatives et en constructeur les obligatoires.</p>
 
                 <aside class="notes">
+                    <ul>
+                        <li>@inject : si on veut sortir de spring</li>
+                        <li>@autowired : si on veut rester dans spring</li>
+                        <li>@ressource : si surcharge nombreuses et complexe (by name first)</li>
+                    </ul>
                 </aside>
             </section>
 
@@ -1000,6 +1040,177 @@ private Toto toto;
             </section>
         </section>
 
+
+        <!-- *************************************************************** -->
+        <!-- 6. Spring & le test -->
+        <!-- *************************************************************** -->
+
+        <section>
+            <section>
+                <h2>Spring & le test unitaire</h2>
+            </section>
+
+            <section>
+                <h3>Intégration avec JUnit</h3>
+
+                <ul>
+                    <li>Spring, container léger, s'occupe d'instancier à la place de java</li>
+                    <li>JUnit doit connaître le contexte Spring</li>
+                    <li>Nécessite a déclaration d'un runner particulier</li>
+
+                    <pre><code  data-trim>
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes = {[...].class})
+@ContextConfiguration(locations = {"classpath:[...].xml"})
+                    </code></pre>
+                    <li>Exemple dans les projets spring 14 et 15..</li>
+                </ul>
+
+                <aside class="notes">
+                </aside>
+            </section>
+        </section>
+
+        <!-- *************************************************************** -->
+        <!-- 6. Spring boot -->
+        <!-- *************************************************************** -->
+
+        <section>
+            <section>
+                <h2>Spring boot</h2>
+            </section>
+
+            <section>
+                <h3>Spring boot</h3>
+
+                <ul>
+                    <li>Permet la création d'une application stand alone (JAR)</li>
+                    <li>Embarque Tomcat (default), Jetty ou Undertow</li>
+                    <li>Configuration automatique de spring quand c'est possible</li>
+                    <li>Aucune génération de code, aucun XML</li>
+                    <li>Fournit des metrics par défaut</li>
+                    <li>Exemple dans le projet spring 16..</li>
+                </ul>
+
+                <aside class="notes">
+                    Nouvelles dépendances. On a ajouté web et test.
+                    Dans les tests, nouvelles annotations
+                    Dans APP : @SpringBootApplication
+                    Méthode main avec un runner.
+                    On a un controller classique.
+                    java -jar ... ==> Test du health ==> localhost:8080/health
+                    Actuator se lance pas automatiquement sous intellIJ
+                </aside>
+            </section>
+
+            <section>
+                <h3>Spring actuator</h3>
+
+                <ul>
+                    <li>Ensemble de metrics par défaut
+                    <ul>
+                        <li>/health</li>
+                        <li>/info</li>
+                        <li>/metrics</li>
+                        <li>/loggers</li>
+                        <li>...</li>
+                    </ul>
+                    </li>
+                    <li>Possibilité d'ajouter / surcharger</li>
+                    <li>Attention, non accessible sans auth par défaut</li>
+                    <li>Exemple dans le projet spring 17..</li>
+                </ul>
+
+                <aside class="notes">
+                    Il faut autoriser http ou être authentifié pour accéder aux endpoints.
+                    Si on a un env JPA, automatiquement le health sera ajouté.
+                </aside>
+            </section>
+
+            <section>
+                <h3>Spring boot Undertow</h3>
+
+                <ul>
+                    <li>Il est possible de choisir son serveur d'application</li>
+                    <li>Exemple dans le projet spring 17..</li>
+                </ul>
+
+                <aside class="notes">
+                    ne pas oublier l'exclusion dans starter web
+                    On regarde dans la console, on voit undertow
+                </aside>
+            </section>
+
+            <section>
+                <h3>Customisation</h3>
+                <ul>
+                    <li>Grande possibilité de customisation</li>
+                    <li>Fichier de paramétrage yaml possible</li>
+                    <li>Exemple dans le projet spring 17..</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Un petit projet Todo ?</h3>
+                <ul>
+                    <li>@PostMapping</li>
+                    <li>Possibilité de scheduler</li>
+                    <li>Référence : https://spring.io/guides/gs/scheduling-tasks/</li>
+                    <li>Exemple dans le projet Spring 18..</li>
+                </ul>
+
+                <aside class="notes">
+
+                </aside>
+            </section>
+
+            <section>
+                <h3>start.spring.io</h3>
+
+                <ul>
+                    <li>Génération de projet spring boot : https://start.spring.io/</li>
+                </ul>
+
+                <aside class="notes">
+
+                </aside>
+            </section>
+
+            <section>
+                <h3>De nombreux exemple</h3>
+                <ul>
+                    <li>Spring boot est très fournit en documentation</li>
+                    <li>https://github.com/spring-projects/spring-boot/tree/master/spring-boot-samples</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Alors Spring boot ça déchire non ?</h2>
+            </section>
+
+            <section>
+                <h3>Bien ...</h3>
+                <ul>
+                    <li>Se déploie partout juste en déponsant le jar</li>
+                    <li>Parfait pour les micro services</li>
+                    <li>Stack / dépendance simplifié</li>
+                    <li>Démarrage rapide d'un nouveau projet</li>
+                    <li>Pas de configuration xml</li>
+                </ul>
+            </section>
+            <section>
+                <h3>... mais pas parfait</h3>
+                <ul>
+                    <li>Très compliqué à ajouter dans un projet legacy</li>
+                    <li>Customisation parfois "lourde"</li>
+                    <li>Pas de configuration via xml</li>
+                    <li>Effet black box</li>
+                    <li>On a pas forcément toute la main sur le serveur d'appli</li>
+                    <li>Documentation fournit mais parfois brouillone</li>
+                </ul>
+            </section>
+        </section>
+
         <!-- *************************************************************** -->
         <!-- 7. Spring plus loin -->
         <!-- *************************************************************** -->
@@ -1032,7 +1243,8 @@ private Toto toto;
                             <li>Java 8+</li>
                             <li>Hibernate 5+</li>
                             <li>JPA 2.1+</li>
-                            <li>Inclusion de spring reactive</li>
+                            <li>Inclusion de <b>spring reactive</b></li>
+                            <li>Compatible kotlin</li>
                         </ul>
                     </li>
                 </ul>
@@ -1067,26 +1279,19 @@ private Toto toto;
 			<ul>
 				<li>"#{ T(java.lang.Math).random() * 100.0 }"</li>
 				<li>"#{ systemProperties['user.region'] }"</li>
-				<li>http://docs.spring.io/spring/docs/current/spring-framework-reference/html/expressions.html#expressions-beandef</li>
-				<li>http://docs.spring.io/spring/docs/current/spring-framework-reference/html/expressions.html#expressions-ref-functions</li>
-				<li>https://www.mkyong.com/spring3/spring-el-hello-world-example/</li>
-				<li>https://www.mkyong.com/spring3/spring-el-lists-maps-example/</li>
-				
+				<li><a href="http://docs.spring.io/spring/docs/current/spring-framework-reference/html/expressions.html#expressions-beandef" target="_blank">Documentation officielle</a></li>
+				<li><a href="https://www.mkyong.com/spring3/spring-el-hello-world-example/" target="_blank">Mkyong hello world EL</a></li>
+                <li><a href="https://www.mkyong.com/spring3/spring-el-lists-maps-example/" target="_blank">Mkyong List / Map</a></li>
+                <li><a href="https://www.mkyong.com/spring/spring-how-to-pass-a-date-into-bean-property-customdateeditor/" target="_blank">Mkyong Converter date</a></li>
+                <li><a href="https://www.javacodegeeks.com/2013/11/type-conversion-in-spring-2.html" target="_blank">Converter bean & mvc</a></li>
 			</ul>
 		</section>
-		
+
 		<section>
-			<li>Converter date : https://www.mkyong.com/spring/spring-how-to-pass-a-date-into-bean-property-customdateeditor/</li>
-			<li>Converter bean & mvc : https://www.javacodegeeks.com/2013/11/type-conversion-in-spring-2.html</li>
-		</section>
-		
-		<section>
-			<h2>Ressources</h2>
+			<h2>Ressources supplémentaires</h2>
 			<ul>
-				<li>inject, resource, autowired : http://blogs.sourceallies.com/2011/08/spring-injection-with-resource-and-autowired/</li>
 				<li>injection list : https://www.mkyong.com/spring/spring-listfactorybean-example/</li>
 				<li>La bible : http://www.mkyong.com/</li>
-				<li></li>
 			</ul>
 		</section>
 
