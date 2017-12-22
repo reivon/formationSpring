@@ -7,63 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35959ef9-6f05-498c-8da6-661cdba9d09e" name="Default" comment="Enrichissement des slides sur la gestion des formulaires MVC">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FormationSpring_16/.mvn/wrapper/maven-wrapper.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FormationSpring_16/.mvn/wrapper/maven-wrapper.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FormationSpring_16/mvnw" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FormationSpring_16/mvnw.cmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FormationSpring_16/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FormationSpring_16/src/main/java/fr/reivon/formation/spring/sprintbootHelloWorld/MyController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FormationSpring_16/src/main/java/fr/reivon/formation/spring/sprintbootHelloWorld/SprintbootHelloWorldApplication.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FormationSpring_16/src/main/java/fr/reivon/formation/spring/sprintbootHelloWorld/health/MyHealthIndicator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FormationSpring_16/src/main/resources/application.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FormationSpring_16/src/test/java/fr/reivon/formation/spring/sprintbootHelloWorld/SprintbootHelloWorldApplicationTests.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FormationSpring_17/src/main/resources/application.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FormationSpring_18/src/main/java/fr/reivon/formation/spring/sprintbootHelloWorld/domain/Todo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FormationSpring_18/src/main/java/fr/reivon/formation/spring/sprintbootHelloWorld/service/TodoService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_1/FormationSpring_1.iml" afterPath="$PROJECT_DIR$/FormationSpring_1/FormationSpring_1.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_1/src/main/resource/applicationContext.xml" afterPath="$PROJECT_DIR$/FormationSpring_1/src/main/resource/applicationContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_10/FormationSpring_10.iml" afterPath="$PROJECT_DIR$/FormationSpring_10/FormationSpring_10.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_10/pom.xml" afterPath="$PROJECT_DIR$/FormationSpring_10/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_11/FormationSpring_11.iml" afterPath="$PROJECT_DIR$/FormationSpring_11/FormationSpring_11.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_11/pom.xml" afterPath="$PROJECT_DIR$/FormationSpring_11/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_12/FormationSpring_12.iml" afterPath="$PROJECT_DIR$/FormationSpring_12/FormationSpring_12.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_12/pom.xml" afterPath="$PROJECT_DIR$/FormationSpring_12/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_13/FormationSpring_13.iml" afterPath="$PROJECT_DIR$/FormationSpring_13/FormationSpring_13.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_13/pom.xml" afterPath="$PROJECT_DIR$/FormationSpring_13/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_14/FormationSpring_14.iml" afterPath="$PROJECT_DIR$/FormationSpring_14/FormationSpring_14.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_14/pom.xml" afterPath="$PROJECT_DIR$/FormationSpring_14/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_15/FormationSpring_15.iml" afterPath="$PROJECT_DIR$/FormationSpring_15/FormationSpring_15.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_15/pom.xml" afterPath="$PROJECT_DIR$/FormationSpring_15/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_2/FormationSpring_2.iml" afterPath="$PROJECT_DIR$/FormationSpring_2/FormationSpring_2.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_2/src/main/java/fr/reivon/formation/spring2/MessagePrinter.java" afterPath="$PROJECT_DIR$/FormationSpring_2/src/main/java/fr/reivon/formation/spring2/MessagePrinter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_3/FormationSpring_3.iml" afterPath="$PROJECT_DIR$/FormationSpring_3/FormationSpring_3.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_4/FormationSpring_4.iml" afterPath="$PROJECT_DIR$/FormationSpring_4/FormationSpring_4.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_5/FormationSpring_5.iml" afterPath="$PROJECT_DIR$/FormationSpring_5/FormationSpring_5.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_5/pom.xml" afterPath="$PROJECT_DIR$/FormationSpring_5/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_6/FormationSpring_6.iml" afterPath="$PROJECT_DIR$/FormationSpring_6/FormationSpring_6.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_6/pom.xml" afterPath="$PROJECT_DIR$/FormationSpring_6/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_7/FormationSpring_7.iml" afterPath="$PROJECT_DIR$/FormationSpring_7/FormationSpring_7.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_7/pom.xml" afterPath="$PROJECT_DIR$/FormationSpring_7/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_8/FormationSpring_8.iml" afterPath="$PROJECT_DIR$/FormationSpring_8/FormationSpring_8.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_8/pom.xml" afterPath="$PROJECT_DIR$/FormationSpring_8/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_8b/FormationSpring_8b.iml" afterPath="$PROJECT_DIR$/FormationSpring_8b/FormationSpring_8b.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_8b/pom.xml" afterPath="$PROJECT_DIR$/FormationSpring_8b/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_8c/FormationSpring_8c.iml" afterPath="$PROJECT_DIR$/FormationSpring_8c/FormationSpring_8c.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_8c/pom.xml" afterPath="$PROJECT_DIR$/FormationSpring_8c/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_8d/FormationSpring_8d.iml" afterPath="$PROJECT_DIR$/FormationSpring_8d/FormationSpring_8d.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_8d/pom.xml" afterPath="$PROJECT_DIR$/FormationSpring_8d/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_9/FormationSpring_9.iml" afterPath="$PROJECT_DIR$/FormationSpring_9/FormationSpring_9.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_9/pom.xml" afterPath="$PROJECT_DIR$/FormationSpring_9/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_exo1/FormationSpring_exo1.iml" afterPath="$PROJECT_DIR$/FormationSpring_exo1/FormationSpring_exo1.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_exo2/FormationSpring_exo2.iml" afterPath="$PROJECT_DIR$/FormationSpring_exo2/FormationSpring_exo2.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_exo2_full/FormationSpring_exo2_full.iml" afterPath="$PROJECT_DIR$/FormationSpring_exo2_full/FormationSpring_exo2_full.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FormationSpring_exo1/src/main/resources/applicationContext.xml" afterPath="$PROJECT_DIR$/FormationSpring_exo1/src/main/resources/applicationContext.xml" />
     </list>
     <ignored path="FormationSpring.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -113,18 +60,7 @@
     <favorites_list name="FormationSpring" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -153,8 +89,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/FormationSpring_exo2/src/main/resources/message/application.properties" />
-        <option value="$PROJECT_DIR$/FormationSpring_exo2/src/main/resources/applicationContext.xml" />
         <option value="$PROJECT_DIR$/FormationSpring_exo1/src/main/java/fr/reivon/formation/spring/exo2/Commercial.java" />
         <option value="$PROJECT_DIR$/FormationSpring_exo2/src/main/java/fr/reivon/formation/spring/exo2/dto/AddVoitureForm.java" />
         <option value="$PROJECT_DIR$/FormationSpring_exo2/src/main/webapp/WEB-INF/HelloWeb-servlet.xml" />
@@ -204,6 +138,8 @@
         <option value="$PROJECT_DIR$/FormationSpring_14/pom.xml" />
         <option value="$PROJECT_DIR$/FormationSpring_15/pom.xml" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/FormationSpring_exo1/src/main/resources/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/FormationSpring_7/src/main/java/fr/reivon/formation/spring7/Dto.java" />
       </list>
     </option>
   </component>
@@ -298,21 +234,84 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="formationSpring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FormationSpring_16" type="462c0819:PsiDirectoryNode" />
+              <item name="FormationSpring_2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="formationSpring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FormationSpring_2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="formationSpring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FormationSpring_2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="formationSpring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FormationSpring_2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="formationSpring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FormationSpring_2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="spring2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="formationSpring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FormationSpring_exo1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="formationSpring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FormationSpring_exo1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="formationSpring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FormationSpring_exo1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="formationSpring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FormationSpring_exo1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="formationSpring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FormationSpring_exo1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="formationSpring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FormationSpring_exo1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2022,17 +2021,47 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="178606000" />
+    <option name="totallyTimeSpent" value="178839000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="260" y="27" width="1922" height="1053" extended-state="6" />
-    <editor active="true" />
+    <frame x="-1" y="0" width="1922" height="1053" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32792208" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21854305" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39918256" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32561308" sideWeight="0.4978678" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25941873" sideWeight="0.5" order="14" side_tool="false" content_ui="combo" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33651227" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24386922" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19370331" sideWeight="0.49425286" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991204" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23614073" sideWeight="0.50574714" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32792208" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21985058" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2046,6 +2075,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938644" sideWeight="0.5" order="14" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33799785" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -2053,14 +2083,9 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24066168" sideWeight="0.49425286" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23614073" sideWeight="0.50574714" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -2151,64 +2176,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/FormationSpring_16/mvnw.cmd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1260">
-          <caret line="28" column="75" lean-forward="true" selection-start-line="28" selection-start-column="75" selection-end-line="28" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FormationSpring_16/src/main/java/fr/reivon/formation/spring/sprintbootHelloWorld/MyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FormationSpring_16/src/main/java/fr/reivon/formation/spring/sprintbootHelloWorld/SprintbootHelloWorldApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FormationSpring_16/src/main/java/fr/reivon/formation/spring/sprintbootHelloWorld/health/MyHealthIndicator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="69" lean-forward="false" selection-start-line="14" selection-start-column="69" selection-end-line="14" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FormationSpring_16/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="85" lean-forward="false" selection-start-line="4" selection-start-column="85" selection-end-line="4" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FormationSpring_17/src/main/resources/application.properties" />
-    <entry file="file://$PROJECT_DIR$/FormationSpring_18/.mvn/wrapper/maven-wrapper.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FormationSpring_18/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="44" column="21" lean-forward="false" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FormationSpring_17/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="18" lean-forward="false" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FormationSpring_4/src/main/java/fr/reivon/formation/spring4/Application.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -2228,7 +2195,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2252,7 +2218,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2268,10 +2233,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-          <folding>
-            <element signature="e#182#183#0" expanded="false" />
-            <element signature="e#243#244#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2293,16 +2254,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FormationSpring_18/src/main/java/fr/reivon/formation/spring/sprintbootHelloWorld/service/TodoService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="75">
+          <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FormationSpring_18/src/main/java/fr/reivon/formation/spring/sprintbootHelloWorld/ressource/TodoRessource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="56" lean-forward="false" selection-start-line="0" selection-start-column="56" selection-end-line="0" selection-end-column="56" />
           <folding />
         </state>
       </provider>
@@ -2317,8 +2278,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FormationSpring_18/src/main/java/fr/reivon/formation/spring/sprintbootHelloWorld/domain/Todo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        <state relative-caret-position="90">
+          <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -2343,7 +2304,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="372">
           <caret line="1288" column="0" lean-forward="false" selection-start-line="1288" selection-start-column="0" selection-end-line="1288" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2351,7 +2311,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2359,7 +2318,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2367,33 +2325,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FormationSpring_5/src/main/java/fr/reivon/formation/spring5/HelloController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FormationSpring_5/src/main/webapp/WEB-INF/HelloWeb-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FormationSpring_5/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2409,7 +2340,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="609">
           <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2433,7 +2363,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
           <caret line="55" column="18" lean-forward="false" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2441,7 +2370,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="849">
           <caret line="68" column="18" lean-forward="false" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2449,7 +2377,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="849">
           <caret line="67" column="18" lean-forward="false" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2457,7 +2384,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
           <caret line="55" column="18" lean-forward="false" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2465,7 +2391,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
           <caret line="54" column="18" lean-forward="false" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2473,7 +2398,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="849">
           <caret line="74" column="18" lean-forward="false" selection-start-line="74" selection-start-column="18" selection-end-line="74" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2481,7 +2405,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="849">
           <caret line="73" column="18" lean-forward="false" selection-start-line="73" selection-start-column="18" selection-end-line="73" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2489,7 +2412,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="849">
           <caret line="71" column="18" lean-forward="false" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2497,7 +2419,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2505,7 +2426,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2513,7 +2433,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="33" column="44" lean-forward="false" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2525,7 +2444,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FormationSpring_17/.gitignore">
+    <entry file="file://$PROJECT_DIR$/FormationSpring_17/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/FormationSpring_16/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FormationSpring_17/src/main/java/fr/reivon/formation/spring/sprintbootHelloWorld/SprintbootHelloWorldApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FormationSpring_17/src/test/java/fr/reivon/formation/spring/sprintbootHelloWorld/SprintbootHelloWorldApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FormationSpring_18/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -2533,18 +2477,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FormationSpring_16/.gitignore">
+    <entry file="file://$PROJECT_DIR$/FormationSpring_17/src/main/java/fr/reivon/formation/spring/sprintbootHelloWorld/MyController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="26" selection-end-column="5" />
+        <state relative-caret-position="165">
+          <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/FormationSpring_exo1/src/main/resources/applicationContextTrue.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FormationSpring_7/src/main/java/fr/reivon/formation/spring7/RandomController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FormationSpring_7/src/main/java/fr/reivon/formation/spring7/Dto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FormationSpring_7/src/main/webapp/WEB-INF/jsp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FormationSpring_exo1/src/main/resources/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="8" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FormationSpring_5/src/main/webapp/WEB-INF/HelloWeb-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FormationSpring_5/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FormationSpring_5/src/main/java/fr/reivon/formation/spring5/HelloController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding />
         </state>
       </provider>

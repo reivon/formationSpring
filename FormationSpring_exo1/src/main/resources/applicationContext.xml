@@ -14,53 +14,12 @@
     <!-- Déclaration des beans -->
 
     <!-- Garage -->
-    <bean id="garage" class="fr.reivon.formation.spring.exo1.Garage">
-        <property name="commercial" ref="commercial"/>
-        <property name="parkings">
-            <list>
-                <ref bean="concession"/>
-                <ref bean="occasion"/>
-            </list>
-        </property>
-    </bean>
 
     <!-- Commercial -->
-    <bean id="commercial" class="fr.reivon.formation.spring.exo1.Commercial"
-          p:nom="Toto"
-          p:age="#{ (new java.util.Random()).nextInt(11) + 1 }"/>
-
-    <!-- T() donne accès aux méthodes de classes ainsi qu'aux constantes. -->
-    <!-- p:age="#{ T(java.lang.Math).random() * 10 }" -->
 
     <!-- Voiture -->
-    <bean id="voiture" class="fr.reivon.formation.spring.exo1.Voiture" abstract="true"/>
-
-    <bean id="clio" parent="voiture" scope="prototype" p:nom="clio"/>
-    <bean id="ferrari" parent="voiture" scope="prototype" p:nom="ferrari"/>
-    <bean id="lotus" parent="voiture" scope="prototype" p:nom="lotus"/>
 
     <!-- parking concession -->
-    <bean id="concession" class="fr.reivon.formation.spring.exo1.Parking" init-method="initEssence">
-        <property name="nom" value="Concession"/>
-        <property name="voitures">
-            <list>
-                <ref bean="clio"/>
-                <ref bean="clio"/>
-                <ref bean="ferrari"/>
-                <ref bean="lotus"/>
-                <ref bean="lotus"/>
-            </list>
-        </property>
-    </bean>
 
     <!-- parking occasion -->
-    <bean id="occasion" class="fr.reivon.formation.spring.exo1.Parking" init-method="initEssence">
-        <property name="nom" value="Occasion"/>
-        <property name="voitures">
-            <list>
-                <ref bean="clio"/>
-                <ref bean="lotus"/>
-            </list>
-        </property>
-    </bean>
 </beans>

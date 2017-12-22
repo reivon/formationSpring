@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+   http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/mvc
+   http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+    <context:component-scan base-package="fr.reivon.formation.spring.exo2full"/>
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <mvc:resources mapping="/resources/**" location="/resources/"/>
+
+    <mvc:annotation-driven/>
+
+    <!-- ********************* Intégration des messages / internationalisation ********************* -->
+    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="useCodeAsDefaultMessage" value="true"/>
+        <property name="basename" value="classpath:message/application"/>
+        <property name="defaultEncoding" value="UTF-8"/>
+    </bean>
+
+    <bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
+        <property name="defaultLocale" value="fr"/>
+    </bean>
+
+    <mvc:interceptors>
+        <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"
+              p:paramName="locale"/>
+    </mvc:interceptors>
+
+    <!-- Déclaration des beans -->
+
+    <!-- Garage -->
+    <bean id="garage" class="fr.reivon.formation.spring.exo2full.model.Garage">
+        <property name="commercial" ref="commercial"/>
+        <property name="parkings">
+            <list>
+                <ref bean="concession"/>
+                <ref bean="occasion"/>
+            </list>
+        </property>
+    </bean>
+
+    <!-- Commercial -->
+    <bean id="commercial" class="fr.reivon.formation.spring.exo2full.model.Commercial"
+          p:nom="Toto"
+          p:age="#{ (new java.util.Random()).nextInt(11) + 1 }"/>
+
+    <!-- Voiture -->
+    <bean id="voiture" class="fr.reivon.formation.spring.exo2full.model.Voiture" abstract="true"/>
+
+    <bean id="clio" parent="voiture" scope="prototype" p:nom="clio"/>
+    <bean id="ferrari" parent="voiture" scope="prototype" p:nom="ferrari"/>
+    <bean id="lotus" parent="voiture" scope="prototype" p:nom="lotus"/>
+
+    <!-- parking concession -->
+    <bean id="concession" class="fr.reivon.formation.spring.exo2full.model.Parking" init-method="initEssence">
+        <property name="nom" value="Concession"/>
+        <property name="voitures">
+            <list>
+                <ref bean="clio"/>
+                <ref bean="clio"/>
+                <ref bean="ferrari"/>
+                <ref bean="lotus"/>
+                <ref bean="lotus"/>
+            </list>
+        </property>
+    </bean>
+
+    <!-- parking occasion -->
+    <bean id="occasion" class="fr.reivon.formation.spring.exo2full.model.Parking" init-method="initEssence">
+        <property name="nom" value="Occasion"/>
+        <property name="voitures">
+            <list>
+                <ref bean="clio"/>
+                <ref bean="lotus"/>
+            </list>
+        </property>
+    </bean>
+
+</beans>
