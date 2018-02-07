@@ -1,7 +1,5 @@
 package fr.reivon.formation.spring2;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 /**

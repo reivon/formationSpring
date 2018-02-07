@@ -39,7 +39,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="formationSpring_1" target="1.5" />
-      <module name="FormationSpring_1" target="1.5" />
+      <module name="FormationSpring_1" target="1.8" />
       <module name="FormationSpring_10" target="1.8" />
       <module name="FormationSpring_11" target="1.8" />
       <module name="FormationSpring_12" target="1.8" />
@@ -51,9 +51,9 @@
       <module name="FormationSpring_17 (1)" target="1.8" />
       <module name="FormationSpring_18" target="1.8" />
       <module name="formationSpring_2" target="1.5" />
-      <module name="FormationSpring_2" target="1.5" />
-      <module name="FormationSpring_3" target="1.5" />
-      <module name="FormationSpring_4" target="1.5" />
+      <module name="FormationSpring_2" target="1.8" />
+      <module name="FormationSpring_3" target="1.8" />
+      <module name="FormationSpring_4" target="1.8" />
       <module name="FormationSpring_5" target="1.8" />
       <module name="FormationSpring_6" target="1.8" />
       <module name="FormationSpring_7" target="1.8" />
