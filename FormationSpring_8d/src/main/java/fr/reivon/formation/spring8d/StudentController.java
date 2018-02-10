@@ -36,7 +36,7 @@ public class StudentController {
                 byte[] bytes = file.getBytes();
 
                 // Creating directory
-                File dir = new File("c:" + File.separator + "tmpFiles");
+                File dir = new File("/home/reivon" + File.separator + "tmpFiles");
                 if (!dir.exists()) {
                     dir.mkdirs();
                 }

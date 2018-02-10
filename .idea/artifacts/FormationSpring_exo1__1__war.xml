@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="FormationSpring_exo1 (1):war">
-    <output-path>$PROJECT_DIR$/FormationSpring_exo2/target</output-path>
-    <root id="archive" name="FormationSpring_exo2.war">
-      <element id="artifact" artifact-name="FormationSpring_exo1 (1):war exploded" />
-    </root>
-  </artifact>
-</component>

@@ -1,7 +1,5 @@
 package fr.reivon.formation.spring15;
 
-import fr.reivon.formation.spring15.DataModelService;
-import fr.reivon.formation.spring15.MachineLearningService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;

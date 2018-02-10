@@ -40,7 +40,7 @@
     <!-- Définition du writer -->
     <!-- On pourrait créer notre propre writer implémentant ItemWriter<ReportDto> -->
     <bean id="xmlItemWriter" class="org.springframework.batch.item.xml.StaxEventItemWriter">
-        <property name="resource" value="file:c:/temp/report.xml"/>
+        <property name="resource" value="file:/home/reivon/report.xml"/>
         <property name="marshaller" ref="reportMarshaller"/>
         <property name="rootTagName" value="reportDto"/>
     </bean>
@@ -57,7 +57,7 @@
     <batch:job id="helloWorldJob">
         <batch:step id="step1">
             <batch:tasklet>
-                <batch:chunk reader="cvsFileItemReader" writer="xmlItemWriter" processor="itemProcessor" commit-interval="2" />
+                <batch:chunk reader="cvsFileItemReader" processor="itemProcessor" writer="xmlItemWriter" commit-interval="2" />
             </batch:tasklet>
         </batch:step>
     </batch:job>
